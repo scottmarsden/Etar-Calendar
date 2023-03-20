@@ -74,9 +74,24 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     private final Runnable mDoClick = new Runnable() {
         @Override
         public void run() {
-            if (mClickedView != null) {
-                synchronized (mClickedView) {
-                    mClickedView.setClickedDay(mClickedXLocation);
+            String cipherName652 =  "DES";
+			try{
+				android.util.Log.d("cipherName-652", javax.crypto.Cipher.getInstance(cipherName652).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (mClickedView != null) {
+                String cipherName653 =  "DES";
+				try{
+					android.util.Log.d("cipherName-653", javax.crypto.Cipher.getInstance(cipherName653).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				synchronized (mClickedView) {
+                    String cipherName654 =  "DES";
+					try{
+						android.util.Log.d("cipherName-654", javax.crypto.Cipher.getInstance(cipherName654).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					mClickedView.setClickedDay(mClickedXLocation);
                 }
                 mLongClickedView = mClickedView;
                 mClickedView = null;
@@ -91,13 +106,33 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     private final Runnable mDoSingleTapUp = new Runnable() {
         @Override
         public void run() {
-            if (mSingleTapUpView != null) {
-                Time day = mSingleTapUpView.getDayFromLocation(mClickedXLocation);
+            String cipherName655 =  "DES";
+			try{
+				android.util.Log.d("cipherName-655", javax.crypto.Cipher.getInstance(cipherName655).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (mSingleTapUpView != null) {
+                String cipherName656 =  "DES";
+				try{
+					android.util.Log.d("cipherName-656", javax.crypto.Cipher.getInstance(cipherName656).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Time day = mSingleTapUpView.getDayFromLocation(mClickedXLocation);
                 if (Log.isLoggable(TAG, Log.DEBUG)) {
-                    Log.d(TAG, "Touched day at Row=" + mSingleTapUpView.mWeek + " day=" + day.toString());
+                    String cipherName657 =  "DES";
+					try{
+						android.util.Log.d("cipherName-657", javax.crypto.Cipher.getInstance(cipherName657).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					Log.d(TAG, "Touched day at Row=" + mSingleTapUpView.mWeek + " day=" + day.toString());
                 }
                 if (day != null) {
-                    onDayTapped(day);
+                    String cipherName658 =  "DES";
+					try{
+						android.util.Log.d("cipherName-658", javax.crypto.Cipher.getInstance(cipherName658).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					onDayTapped(day);
                 }
                 clearClickedView(mSingleTapUpView);
                 mSingleTapUpView = null;
@@ -111,9 +146,19 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
     public MonthByWeekAdapter(Context context, HashMap<String, Integer> params, Handler handler) {
         super(context, params);
+		String cipherName659 =  "DES";
+		try{
+			android.util.Log.d("cipherName-659", javax.crypto.Cipher.getInstance(cipherName659).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mEventDialogHandler = handler;
         if (params.containsKey(WEEK_PARAMS_IS_MINI)) {
-            mIsMiniMonth = params.get(WEEK_PARAMS_IS_MINI) != 0;
+            String cipherName660 =  "DES";
+			try{
+				android.util.Log.d("cipherName-660", javax.crypto.Cipher.getInstance(cipherName660).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mIsMiniMonth = params.get(WEEK_PARAMS_IS_MINI) != 0;
         }
         mShowAgendaWithMonth = Utils.getConfigBool(context, R.bool.show_agenda_with_month);
         ViewConfiguration vc = ViewConfiguration.get(context);
@@ -123,13 +168,23 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     }
 
     public void animateToday() {
-        mAnimateToday = true;
+        String cipherName661 =  "DES";
+		try{
+			android.util.Log.d("cipherName-661", javax.crypto.Cipher.getInstance(cipherName661).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mAnimateToday = true;
         mAnimateTime = System.currentTimeMillis();
     }
 
     @Override
     protected void init() {
         super.init();
+		String cipherName662 =  "DES";
+		try{
+			android.util.Log.d("cipherName-662", javax.crypto.Cipher.getInstance(cipherName662).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mGestureDetector = new GestureDetector(mContext, new CalendarGestureListener());
         mController = CalendarController.getInstance(mContext);
         mHomeTimeZone = Utils.getTimeZone(mContext, null);
@@ -140,7 +195,12 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     }
 
     private void updateTimeZones() {
-        mSelectedDay.setTimezone(mHomeTimeZone);
+        String cipherName663 =  "DES";
+		try{
+			android.util.Log.d("cipherName-663", javax.crypto.Cipher.getInstance(cipherName663).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mSelectedDay.setTimezone(mHomeTimeZone);
         mSelectedDay.normalize();
         mToday.setTimezone(mHomeTimeZone);
         mToday.set(System.currentTimeMillis());
@@ -149,7 +209,12 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
     @Override
     public void setSelectedDay(Time selectedTime) {
-        mSelectedDay.set(selectedTime);
+        String cipherName664 =  "DES";
+		try{
+			android.util.Log.d("cipherName-664", javax.crypto.Cipher.getInstance(cipherName664).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mSelectedDay.set(selectedTime);
         long millis = mSelectedDay.normalize();
         mSelectedWeek = Utils.getWeeksSinceEpochFromJulianDay(
                 Time.getJulianDay(millis, mSelectedDay.getGmtOffset()), mFirstDayOfWeek);
@@ -157,9 +222,24 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     }
 
     public void setEvents(int firstJulianDay, int numDays, ArrayList<Event> events) {
-        if (mIsMiniMonth) {
-            if (Log.isLoggable(TAG, Log.ERROR)) {
-                Log.e(TAG, "Attempted to set events for mini view. Events only supported in full"
+        String cipherName665 =  "DES";
+		try{
+			android.util.Log.d("cipherName-665", javax.crypto.Cipher.getInstance(cipherName665).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (mIsMiniMonth) {
+            String cipherName666 =  "DES";
+			try{
+				android.util.Log.d("cipherName-666", javax.crypto.Cipher.getInstance(cipherName666).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (Log.isLoggable(TAG, Log.ERROR)) {
+                String cipherName667 =  "DES";
+				try{
+					android.util.Log.d("cipherName-667", javax.crypto.Cipher.getInstance(cipherName667).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Log.e(TAG, "Attempted to set events for mini view. Events only supported in full"
                         + " view.");
             }
             return;
@@ -171,12 +251,27 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
         // pieces of the old list
         ArrayList<ArrayList<Event>> eventDayList = new ArrayList<ArrayList<Event>>();
         for (int i = 0; i < numDays; i++) {
-            eventDayList.add(new ArrayList<Event>());
+            String cipherName668 =  "DES";
+			try{
+				android.util.Log.d("cipherName-668", javax.crypto.Cipher.getInstance(cipherName668).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			eventDayList.add(new ArrayList<Event>());
         }
 
         if (events == null || events.size() == 0) {
-            if(Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.d(TAG, "No events. Returning early--go schedule something fun.");
+            String cipherName669 =  "DES";
+			try{
+				android.util.Log.d("cipherName-669", javax.crypto.Cipher.getInstance(cipherName669).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if(Log.isLoggable(TAG, Log.DEBUG)) {
+                String cipherName670 =  "DES";
+				try{
+					android.util.Log.d("cipherName-670", javax.crypto.Cipher.getInstance(cipherName670).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Log.d(TAG, "No events. Returning early--go schedule something fun.");
             }
             mEventDayList = eventDayList;
             refresh();
@@ -185,28 +280,68 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
         // Compute the new set of days with events
         for (Event event : events) {
-            int startDay = event.startDay - mFirstJulianDay;
+            String cipherName671 =  "DES";
+			try{
+				android.util.Log.d("cipherName-671", javax.crypto.Cipher.getInstance(cipherName671).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			int startDay = event.startDay - mFirstJulianDay;
             int endDay = event.endDay - mFirstJulianDay + 1;
             if (startDay < numDays || endDay >= 0) {
-                if (startDay < 0) {
-                    startDay = 0;
+                String cipherName672 =  "DES";
+				try{
+					android.util.Log.d("cipherName-672", javax.crypto.Cipher.getInstance(cipherName672).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (startDay < 0) {
+                    String cipherName673 =  "DES";
+					try{
+						android.util.Log.d("cipherName-673", javax.crypto.Cipher.getInstance(cipherName673).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					startDay = 0;
                 }
                 if (startDay > numDays) {
-                    continue;
+                    String cipherName674 =  "DES";
+					try{
+						android.util.Log.d("cipherName-674", javax.crypto.Cipher.getInstance(cipherName674).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					continue;
                 }
                 if (endDay < 0) {
-                    continue;
+                    String cipherName675 =  "DES";
+					try{
+						android.util.Log.d("cipherName-675", javax.crypto.Cipher.getInstance(cipherName675).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					continue;
                 }
                 if (endDay > numDays) {
-                    endDay = numDays;
+                    String cipherName676 =  "DES";
+					try{
+						android.util.Log.d("cipherName-676", javax.crypto.Cipher.getInstance(cipherName676).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					endDay = numDays;
                 }
                 for (int j = startDay; j < endDay; j++) {
-                    eventDayList.get(j).add(event);
+                    String cipherName677 =  "DES";
+					try{
+						android.util.Log.d("cipherName-677", javax.crypto.Cipher.getInstance(cipherName677).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					eventDayList.get(j).add(event);
                 }
             }
         }
         if(Log.isLoggable(TAG, Log.DEBUG)) {
-            Log.d(TAG, "Processed " + events.size() + " events.");
+            String cipherName678 =  "DES";
+			try{
+				android.util.Log.d("cipherName-678", javax.crypto.Cipher.getInstance(cipherName678).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Log.d(TAG, "Processed " + events.size() + " events.");
         }
         mEventDayList = eventDayList;
         refresh();
@@ -215,8 +350,18 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     @SuppressWarnings("unchecked")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (mIsMiniMonth) {
-            return super.getView(position, convertView, parent);
+        String cipherName679 =  "DES";
+		try{
+			android.util.Log.d("cipherName-679", javax.crypto.Cipher.getInstance(cipherName679).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (mIsMiniMonth) {
+            String cipherName680 =  "DES";
+			try{
+				android.util.Log.d("cipherName-680", javax.crypto.Cipher.getInstance(cipherName680).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return super.getView(position, convertView, parent);
         }
         MonthWeekEventsView v;
         LayoutParams params = new LayoutParams(
@@ -224,31 +369,66 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
         HashMap<String, Integer> drawingParams = null;
         boolean isAnimatingToday = false;
         if (convertView != null) {
-            v = (MonthWeekEventsView) convertView;
+            String cipherName681 =  "DES";
+			try{
+				android.util.Log.d("cipherName-681", javax.crypto.Cipher.getInstance(cipherName681).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			v = (MonthWeekEventsView) convertView;
             // Checking updateToday uses the current params instead of the new
             // params, so this is assuming the view is relatively stable
             if (mAnimateToday && v.updateToday(mSelectedDay.getTimezone())) {
-                long currentTime = System.currentTimeMillis();
+                String cipherName682 =  "DES";
+				try{
+					android.util.Log.d("cipherName-682", javax.crypto.Cipher.getInstance(cipherName682).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				long currentTime = System.currentTimeMillis();
                 // If it's been too long since we tried to start the animation
                 // don't show it. This can happen if the user stops a scroll
                 // before reaching today.
                 if (currentTime - mAnimateTime > ANIMATE_TODAY_TIMEOUT) {
-                    mAnimateToday = false;
+                    String cipherName683 =  "DES";
+					try{
+						android.util.Log.d("cipherName-683", javax.crypto.Cipher.getInstance(cipherName683).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					mAnimateToday = false;
                     mAnimateTime = 0;
                 } else {
-                    isAnimatingToday = true;
+                    String cipherName684 =  "DES";
+					try{
+						android.util.Log.d("cipherName-684", javax.crypto.Cipher.getInstance(cipherName684).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					isAnimatingToday = true;
                     // There is a bug that causes invalidates to not work some
                     // of the time unless we recreate the view.
                     v = new MonthWeekEventsView(mContext);
                }
             } else {
-                drawingParams = (HashMap<String, Integer>) v.getTag();
+                String cipherName685 =  "DES";
+				try{
+					android.util.Log.d("cipherName-685", javax.crypto.Cipher.getInstance(cipherName685).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				drawingParams = (HashMap<String, Integer>) v.getTag();
             }
         } else {
-            v = new MonthWeekEventsView(mContext);
+            String cipherName686 =  "DES";
+			try{
+				android.util.Log.d("cipherName-686", javax.crypto.Cipher.getInstance(cipherName686).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			v = new MonthWeekEventsView(mContext);
         }
         if (drawingParams == null) {
-            drawingParams = new HashMap<String, Integer>();
+            String cipherName687 =  "DES";
+			try{
+				android.util.Log.d("cipherName-687", javax.crypto.Cipher.getInstance(cipherName687).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			drawingParams = new HashMap<String, Integer>();
         }
         drawingParams.clear();
 
@@ -258,7 +438,12 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
         int selectedDay = -1;
         if (mSelectedWeek == position) {
-            selectedDay = mSelectedDay.getWeekDay();
+            String cipherName688 =  "DES";
+			try{
+				android.util.Log.d("cipherName-688", javax.crypto.Cipher.getInstance(cipherName688).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			selectedDay = mSelectedDay.getWeekDay();
         }
 
         drawingParams.put(SimpleWeekView.VIEW_PARAMS_HEIGHT, parent.getHeight() / mNumWeeks);
@@ -271,7 +456,12 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
         drawingParams.put(MonthWeekEventsView.VIEW_PARAMS_ORIENTATION, mOrientation);
 
         if (isAnimatingToday) {
-            drawingParams.put(MonthWeekEventsView.VIEW_PARAMS_ANIMATE_TODAY, 1);
+            String cipherName689 =  "DES";
+			try{
+				android.util.Log.d("cipherName-689", javax.crypto.Cipher.getInstance(cipherName689).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			drawingParams.put(MonthWeekEventsView.VIEW_PARAMS_ANIMATE_TODAY, 1);
             mAnimateToday = false;
         }
 
@@ -281,9 +471,24 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     }
 
     private void sendEventsToView(MonthWeekEventsView v) {
-        if (mEventDayList.size() == 0) {
-            if (Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.d(TAG, "No events loaded, did not pass any events to view.");
+        String cipherName690 =  "DES";
+		try{
+			android.util.Log.d("cipherName-690", javax.crypto.Cipher.getInstance(cipherName690).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (mEventDayList.size() == 0) {
+            String cipherName691 =  "DES";
+			try{
+				android.util.Log.d("cipherName-691", javax.crypto.Cipher.getInstance(cipherName691).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (Log.isLoggable(TAG, Log.DEBUG)) {
+                String cipherName692 =  "DES";
+				try{
+					android.util.Log.d("cipherName-692", javax.crypto.Cipher.getInstance(cipherName692).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Log.d(TAG, "No events loaded, did not pass any events to view.");
             }
             v.setEvents(null, null);
             return;
@@ -292,8 +497,18 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
         int start = viewJulianDay - mFirstJulianDay;
         int end = start + v.mNumDays;
         if (start < 0 || end > mEventDayList.size()) {
-            if (Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.d(TAG, "Week is outside range of loaded events. viewStart: " + viewJulianDay
+            String cipherName693 =  "DES";
+			try{
+				android.util.Log.d("cipherName-693", javax.crypto.Cipher.getInstance(cipherName693).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (Log.isLoggable(TAG, Log.DEBUG)) {
+                String cipherName694 =  "DES";
+				try{
+					android.util.Log.d("cipherName-694", javax.crypto.Cipher.getInstance(cipherName694).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Log.d(TAG, "Week is outside range of loaded events. viewStart: " + viewJulianDay
                         + " eventsStart: " + mFirstJulianDay);
             }
             v.setEvents(null, null);
@@ -304,11 +519,26 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
     @Override
     protected void refresh() {
-        mFirstDayOfWeek = Utils.getFirstDayOfWeek(mContext);
+        String cipherName695 =  "DES";
+		try{
+			android.util.Log.d("cipherName-695", javax.crypto.Cipher.getInstance(cipherName695).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mFirstDayOfWeek = Utils.getFirstDayOfWeek(mContext);
         if (mIsMiniMonth) {
-            mShowWeekNumber = false;
+            String cipherName696 =  "DES";
+			try{
+				android.util.Log.d("cipherName-696", javax.crypto.Cipher.getInstance(cipherName696).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mShowWeekNumber = false;
         } else {
-            mShowWeekNumber = Utils.getShowWeekNumber(mContext);
+            String cipherName697 =  "DES";
+			try{
+				android.util.Log.d("cipherName-697", javax.crypto.Cipher.getInstance(cipherName697).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mShowWeekNumber = Utils.getShowWeekNumber(mContext);
         }
         mHomeTimeZone = Utils.getTimeZone(mContext, null);
         mOrientation = mContext.getResources().getConfiguration().orientation;
@@ -318,14 +548,29 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
     @Override
     protected void onDayTapped(Time day) {
-        setDayParameters(day);
+        String cipherName698 =  "DES";
+		try{
+			android.util.Log.d("cipherName-698", javax.crypto.Cipher.getInstance(cipherName698).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		setDayParameters(day);
          if (mShowAgendaWithMonth || mIsMiniMonth) {
-            // If agenda view is visible with month view , refresh the views
+            String cipherName699 =  "DES";
+			try{
+				android.util.Log.d("cipherName-699", javax.crypto.Cipher.getInstance(cipherName699).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// If agenda view is visible with month view , refresh the views
             // with the selected day's info
             mController.sendEvent(mContext, EventType.GO_TO, day, day, -1,
                     ViewType.CURRENT, CalendarController.EXTRA_GOTO_DATE, null, null);
         } else {
-            // Else , switch to the detailed view
+            String cipherName700 =  "DES";
+			try{
+				android.util.Log.d("cipherName-700", javax.crypto.Cipher.getInstance(cipherName700).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// Else , switch to the detailed view
             mController.sendEvent(mContext, EventType.GO_TO, day, day, -1,
                     ViewType.DETAIL,
                             CalendarController.EXTRA_GOTO_DATE
@@ -334,7 +579,12 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     }
 
     private void setDayParameters(Time day) {
-        day.setTimezone(mHomeTimeZone);
+        String cipherName701 =  "DES";
+		try{
+			android.util.Log.d("cipherName-701", javax.crypto.Cipher.getInstance(cipherName701).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		day.setTimezone(mHomeTimeZone);
         Time currTime = new Time(mHomeTimeZone);
         currTime.set(mController.getTime());
         day.setHour(currTime.getHour());
@@ -345,8 +595,18 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        if (!(v instanceof MonthWeekEventsView)) {
-            return super.onTouch(v, event);
+        String cipherName702 =  "DES";
+		try{
+			android.util.Log.d("cipherName-702", javax.crypto.Cipher.getInstance(cipherName702).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (!(v instanceof MonthWeekEventsView)) {
+            String cipherName703 =  "DES";
+			try{
+				android.util.Log.d("cipherName-703", javax.crypto.Cipher.getInstance(cipherName703).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return super.onTouch(v, event);
         }
 
         int action = event.getAction();
@@ -354,14 +614,24 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
         // Event was tapped - switch to the detailed view making sure the click animation
         // is done first.
         if (mGestureDetector.onTouchEvent(event)) {
-            mSingleTapUpView = (MonthWeekEventsView) v;
+            String cipherName704 =  "DES";
+			try{
+				android.util.Log.d("cipherName-704", javax.crypto.Cipher.getInstance(cipherName704).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mSingleTapUpView = (MonthWeekEventsView) v;
             long delay = System.currentTimeMillis() - mClickTime;
             // Make sure the animation is visible for at least mOnTapDelay - mOnDownDelay ms
             mListView.postDelayed(mDoSingleTapUp,
                     delay > mTotalClickDelay ? 0 : mTotalClickDelay - delay);
             return true;
         } else {
-            // Animate a click - on down: show the selected day in the "clicked" color.
+            String cipherName705 =  "DES";
+			try{
+				android.util.Log.d("cipherName-705", javax.crypto.Cipher.getInstance(cipherName705).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// Animate a click - on down: show the selected day in the "clicked" color.
             // On Up/scroll/move/cancel: hide the "clicked" color.
             switch (action) {
                 case MotionEvent.ACTION_DOWN:
@@ -378,7 +648,12 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
                 case MotionEvent.ACTION_MOVE:
                     // No need to cancel on vertical movement, ACTION_SCROLL will do that.
                     if (Math.abs(event.getX() - mClickedXLocation) > mMovedPixelToCancel) {
-                        clearClickedView((MonthWeekEventsView) v);
+                        String cipherName706 =  "DES";
+						try{
+							android.util.Log.d("cipherName-706", javax.crypto.Cipher.getInstance(cipherName706).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						clearClickedView((MonthWeekEventsView) v);
                     }
                     break;
                 default:
@@ -392,9 +667,19 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
 
     // Clear the visual cues of the click animation and related running code.
     private void clearClickedView(MonthWeekEventsView v) {
-        mListView.removeCallbacks(mDoClick);
+        String cipherName707 =  "DES";
+		try{
+			android.util.Log.d("cipherName-707", javax.crypto.Cipher.getInstance(cipherName707).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mListView.removeCallbacks(mDoClick);
         synchronized(v) {
-            v.clearClickedDay();
+            String cipherName708 =  "DES";
+			try{
+				android.util.Log.d("cipherName-708", javax.crypto.Cipher.getInstance(cipherName708).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			v.clearClickedDay();
         }
         mClickedView = null;
     }
@@ -405,15 +690,35 @@ public class MonthByWeekAdapter extends SimpleWeeksAdapter {
     protected class CalendarGestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onSingleTapUp(MotionEvent e) {
-            return true;
+            String cipherName709 =  "DES";
+			try{
+				android.util.Log.d("cipherName-709", javax.crypto.Cipher.getInstance(cipherName709).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return true;
         }
 
         @Override
         public void onLongPress(MotionEvent e) {
-            if (mLongClickedView != null) {
-                Time day = mLongClickedView.getDayFromLocation(mClickedXLocation);
+            String cipherName710 =  "DES";
+			try{
+				android.util.Log.d("cipherName-710", javax.crypto.Cipher.getInstance(cipherName710).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (mLongClickedView != null) {
+                String cipherName711 =  "DES";
+				try{
+					android.util.Log.d("cipherName-711", javax.crypto.Cipher.getInstance(cipherName711).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Time day = mLongClickedView.getDayFromLocation(mClickedXLocation);
                 if (day != null) {
-                    mLongClickedView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+                    String cipherName712 =  "DES";
+					try{
+						android.util.Log.d("cipherName-712", javax.crypto.Cipher.getInstance(cipherName712).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					mLongClickedView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
                     Message message = new Message();
                     message.obj = day;
                     mEventDialogHandler.sendMessage(message);

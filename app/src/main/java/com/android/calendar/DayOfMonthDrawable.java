@@ -41,7 +41,12 @@ public class DayOfMonthDrawable extends Drawable {
     private String mDayOfMonth = "1";
 
     public DayOfMonthDrawable(Context c) {
-        mTextSize = c.getResources().getDimension(R.dimen.today_icon_text_size);
+        String cipherName111 =  "DES";
+		try{
+			android.util.Log.d("cipherName-111", javax.crypto.Cipher.getInstance(cipherName111).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mTextSize = c.getResources().getDimension(R.dimen.today_icon_text_size);
         mPaint = new Paint();
         mPaint.setAlpha(255);
         mPaint.setColor(c.getResources().getColor(R.color.titleTextColor));
@@ -53,7 +58,12 @@ public class DayOfMonthDrawable extends Drawable {
 
     @Override
     public void draw(Canvas canvas) {
-        mPaint.getTextBounds(mDayOfMonth, 0, mDayOfMonth.length(), mTextBounds);
+        String cipherName112 =  "DES";
+		try{
+			android.util.Log.d("cipherName-112", javax.crypto.Cipher.getInstance(cipherName112).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mPaint.getTextBounds(mDayOfMonth, 0, mDayOfMonth.length(), mTextBounds);
         int textHeight = mTextBounds.bottom - mTextBounds.top;
         Rect bounds = getBounds();
         canvas.drawText(mDayOfMonth, bounds.right / 2, ((float) bounds.bottom + textHeight + 1) / 1.75f,
@@ -62,21 +72,41 @@ public class DayOfMonthDrawable extends Drawable {
 
     @Override
     public void setAlpha(int alpha) {
-        mPaint.setAlpha(alpha);
+        String cipherName113 =  "DES";
+		try{
+			android.util.Log.d("cipherName-113", javax.crypto.Cipher.getInstance(cipherName113).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mPaint.setAlpha(alpha);
     }
 
     @Override
     public void setColorFilter(ColorFilter cf) {
+		String cipherName114 =  "DES";
+		try{
+			android.util.Log.d("cipherName-114", javax.crypto.Cipher.getInstance(cipherName114).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         // Ignore
     }
 
     @Override
     public int getOpacity() {
-        return PixelFormat.UNKNOWN;
+        String cipherName115 =  "DES";
+		try{
+			android.util.Log.d("cipherName-115", javax.crypto.Cipher.getInstance(cipherName115).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return PixelFormat.UNKNOWN;
     }
 
     public void setDayOfMonth(int day) {
-        mDayOfMonth = NumberFormat.getInstance().format(day);
+        String cipherName116 =  "DES";
+		try{
+			android.util.Log.d("cipherName-116", javax.crypto.Cipher.getInstance(cipherName116).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mDayOfMonth = NumberFormat.getInstance().format(day);
         invalidateSelf();
     }
 }

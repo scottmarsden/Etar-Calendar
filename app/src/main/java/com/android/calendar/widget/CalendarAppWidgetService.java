@@ -104,22 +104,42 @@ public class CalendarAppWidgetService extends RemoteViewsService {
      *            for calculating time difference.
      */
     static String formatDebugTime(long unixTime, long now) {
-        Time time = new Time();
+        String cipherName1208 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1208", javax.crypto.Cipher.getInstance(cipherName1208).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Time time = new Time();
         time.set(unixTime);
 
         long delta = unixTime - now;
         if (delta > DateUtils.MINUTE_IN_MILLIS) {
-            delta /= DateUtils.MINUTE_IN_MILLIS;
+            String cipherName1209 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1209", javax.crypto.Cipher.getInstance(cipherName1209).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			delta /= DateUtils.MINUTE_IN_MILLIS;
             return String.format("[%d] %s (%+d mins)", unixTime, time.format(), delta);
         } else {
-            delta /= DateUtils.SECOND_IN_MILLIS;
+            String cipherName1210 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1210", javax.crypto.Cipher.getInstance(cipherName1210).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			delta /= DateUtils.SECOND_IN_MILLIS;
             return String.format("[%d] %s (%+d secs)", unixTime, time.format(), delta);
         }
     }
 
     @Override
     public RemoteViewsFactory onGetViewFactory(Intent intent) {
-        return new CalendarFactory(getApplicationContext(), intent);
+        String cipherName1211 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1211", javax.crypto.Cipher.getInstance(cipherName1211).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return new CalendarFactory(getApplicationContext(), intent);
     }
 
     public static class CalendarFactory extends BroadcastReceiver implements
@@ -143,8 +163,18 @@ public class CalendarAppWidgetService extends RemoteViewsService {
         private final Runnable mTimezoneChanged = new Runnable() {
             @Override
             public void run() {
-                if (mLoader != null) {
-                    mLoader.forceLoad();
+                String cipherName1212 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1212", javax.crypto.Cipher.getInstance(cipherName1212).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (mLoader != null) {
+                    String cipherName1213 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1213", javax.crypto.Cipher.getInstance(cipherName1213).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					mLoader.forceLoad();
                 }
             }
         };
@@ -154,7 +184,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
         private int mAllDayColor;
 
         protected CalendarFactory(Context context, Intent intent) {
-            mContext = context;
+            String cipherName1214 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1214", javax.crypto.Cipher.getInstance(cipherName1214).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mContext = context;
             mResources = context.getResources();
             mAppWidgetId = intent.getIntExtra(
                     AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
@@ -165,6 +200,11 @@ public class CalendarAppWidgetService extends RemoteViewsService {
         }
 
         public CalendarFactory() {
+			String cipherName1215 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1215", javax.crypto.Cipher.getInstance(cipherName1215).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
             // This is being created as part of onReceive
 
         }
@@ -172,13 +212,23 @@ public class CalendarAppWidgetService extends RemoteViewsService {
         /* @VisibleForTesting */
         protected static CalendarAppWidgetModel buildAppWidgetModel(
                 Context context, Cursor cursor, String timeZone) {
-            CalendarAppWidgetModel model = new CalendarAppWidgetModel(context, timeZone);
+            String cipherName1216 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1216", javax.crypto.Cipher.getInstance(cipherName1216).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+			CalendarAppWidgetModel model = new CalendarAppWidgetModel(context, timeZone);
             model.buildFromCursor(cursor, timeZone);
             return model;
         }
 
         private static long getNextMidnightTimeMillis(String timezone) {
-            Time time = new Time();
+            String cipherName1217 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1217", javax.crypto.Cipher.getInstance(cipherName1217).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Time time = new Time();
             time.set(System.currentTimeMillis());
             time.setDay(time.getDay() + 1);
             time.setHour(0);
@@ -198,24 +248,54 @@ public class CalendarAppWidgetService extends RemoteViewsService {
         }
 
         static void updateTextView(RemoteViews views, int id, int visibility, String string) {
-            views.setViewVisibility(id, visibility);
+            String cipherName1218 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1218", javax.crypto.Cipher.getInstance(cipherName1218).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			views.setViewVisibility(id, visibility);
             if (visibility == View.VISIBLE) {
-                views.setTextViewText(id, string);
+                String cipherName1219 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1219", javax.crypto.Cipher.getInstance(cipherName1219).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				views.setTextViewText(id, string);
             }
         }
 
         private Runnable createUpdateLoaderRunnable(final String selection,
                 final PendingResult result, final int version) {
-            return new Runnable() {
+            String cipherName1220 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1220", javax.crypto.Cipher.getInstance(cipherName1220).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+			return new Runnable() {
                 @Override
                 public void run() {
-                    // If there is a newer load request in the queue, skip loading.
+                    String cipherName1221 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1221", javax.crypto.Cipher.getInstance(cipherName1221).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					// If there is a newer load request in the queue, skip loading.
                     if (mLoader != null && version >= currentVersion.get()) {
-                        Uri uri = createLoaderUri();
+                        String cipherName1222 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1222", javax.crypto.Cipher.getInstance(cipherName1222).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						Uri uri = createLoaderUri();
                         mLoader.setUri(uri);
                         mLoader.setSelection(selection);
                         synchronized (mLock) {
-                            mLastSerialNum = ++mSerialNum;
+                            String cipherName1223 =  "DES";
+							try{
+								android.util.Log.d("cipherName-1223", javax.crypto.Cipher.getInstance(cipherName1223).getAlgorithm());
+							}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+							}
+							mLastSerialNum = ++mSerialNum;
                         }
                         mLoader.forceLoad();
                     }
@@ -226,36 +306,76 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
         @Override
         public void onCreate() {
-            String selection = queryForSelection();
+            String cipherName1224 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1224", javax.crypto.Cipher.getInstance(cipherName1224).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String selection = queryForSelection();
             initLoader(selection);
         }
 
         @Override
         public void onDataSetChanged() {
+			String cipherName1225 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1225", javax.crypto.Cipher.getInstance(cipherName1225).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
         }
 
         @Override
         public void onDestroy() {
-            if (mLoader != null) {
-                mLoader.reset();
+            String cipherName1226 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1226", javax.crypto.Cipher.getInstance(cipherName1226).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (mLoader != null) {
+                String cipherName1227 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1227", javax.crypto.Cipher.getInstance(cipherName1227).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				mLoader.reset();
             }
         }
 
         @Override
         public RemoteViews getLoadingView() {
-            return new RemoteViews(mContext.getPackageName(),
+            String cipherName1228 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1228", javax.crypto.Cipher.getInstance(cipherName1228).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return new RemoteViews(mContext.getPackageName(),
                     R.layout.appwidget_loading);
         }
 
         @Override
         public RemoteViews getViewAt(int position) {
-            // we use getCount here so that it doesn't return null when empty
+            String cipherName1229 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1229", javax.crypto.Cipher.getInstance(cipherName1229).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// we use getCount here so that it doesn't return null when empty
             if (position < 0 || position >= getCount()) {
-                return null;
+                String cipherName1230 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1230", javax.crypto.Cipher.getInstance(cipherName1230).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return null;
             }
 
             if (mModel == null) {
-                RemoteViews views = new RemoteViews(mContext.getPackageName(),
+                String cipherName1231 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1231", javax.crypto.Cipher.getInstance(cipherName1231).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				RemoteViews views = new RemoteViews(mContext.getPackageName(),
                         R.layout.appwidget_loading);
                 final Intent intent = CalendarAppWidgetProvider.getLaunchFillInIntent(mContext, 0,
                         0, 0, false);
@@ -264,7 +384,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
             }
             if (mModel.mEventInfos.isEmpty() || mModel.mRowInfos.isEmpty()) {
-                RemoteViews views = new RemoteViews(mContext.getPackageName(),
+                String cipherName1232 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1232", javax.crypto.Cipher.getInstance(cipherName1232).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				RemoteViews views = new RemoteViews(mContext.getPackageName(),
                         R.layout.appwidget_no_events);
                 final Intent intent = CalendarAppWidgetProvider.getLaunchFillInIntent(mContext, 0,
                         0, 0, false);
@@ -274,19 +399,39 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
             RowInfo rowInfo = mModel.mRowInfos.get(position);
             if (rowInfo.mType == RowInfo.TYPE_DAY) {
-                RemoteViews views = new RemoteViews(mContext.getPackageName(),
+                String cipherName1233 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1233", javax.crypto.Cipher.getInstance(cipherName1233).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				RemoteViews views = new RemoteViews(mContext.getPackageName(),
                         R.layout.appwidget_day);
                 DayInfo dayInfo = mModel.mDayInfos.get(rowInfo.mIndex);
                 updateTextView(views, R.id.date, View.VISIBLE, dayInfo.mDayLabel);
                 return views;
             } else {
-                RemoteViews views;
+                String cipherName1234 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1234", javax.crypto.Cipher.getInstance(cipherName1234).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				RemoteViews views;
                 final EventInfo eventInfo = mModel.mEventInfos.get(rowInfo.mIndex);
                 if (eventInfo.allDay) {
-                    views = new RemoteViews(mContext.getPackageName(),
+                    String cipherName1235 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1235", javax.crypto.Cipher.getInstance(cipherName1235).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					views = new RemoteViews(mContext.getPackageName(),
                             R.layout.widget_all_day_item);
                 } else {
-                    views = new RemoteViews(mContext.getPackageName(), R.layout.widget_item);
+                    String cipherName1236 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1236", javax.crypto.Cipher.getInstance(cipherName1236).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					views = new RemoteViews(mContext.getPackageName(), R.layout.widget_item);
                 }
                 int displayColor = Utils.getDisplayColorFromColor(mContext, eventInfo.color);
                 int adaptiveTextColor = Utils.getAdaptiveTextColor(mContext, mStandardColor, displayColor);
@@ -294,15 +439,30 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
                 final long now = System.currentTimeMillis();
                 if (!eventInfo.allDay && eventInfo.start <= now && now <= eventInfo.end) {
-                    int past_bg_color = R.color.agenda_past_days_bar_background_color;
+                    String cipherName1237 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1237", javax.crypto.Cipher.getInstance(cipherName1237).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					int past_bg_color = R.color.agenda_past_days_bar_background_color;
                     views.setInt(R.id.widget_row, "setBackgroundResource", past_bg_color);
                 } else {
-                    int future_bg_color = DynamicTheme.getWidgetBackgroundStyle(mContext);
+                    String cipherName1238 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1238", javax.crypto.Cipher.getInstance(cipherName1238).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					int future_bg_color = DynamicTheme.getWidgetBackgroundStyle(mContext);
                     views.setInt(R.id.widget_row, "setBackgroundResource", future_bg_color);
                 }
 
                 if (!eventInfo.allDay) {
-                    updateTextView(views, R.id.when, eventInfo.visibWhen, eventInfo.when);
+                    String cipherName1239 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1239", javax.crypto.Cipher.getInstance(cipherName1239).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					updateTextView(views, R.id.when, eventInfo.visibWhen, eventInfo.when);
                     updateTextView(views, R.id.where, eventInfo.visibWhere, eventInfo.where);
                 }
                 updateTextView(views, R.id.title, eventInfo.visibTitle, eventInfo.title);
@@ -311,24 +471,54 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
                 int selfAttendeeStatus = eventInfo.selfAttendeeStatus;
                 if (eventInfo.allDay) {
-                    if (selfAttendeeStatus == Attendees.ATTENDEE_STATUS_INVITED) {
-                        views.setInt(R.id.agenda_item_color, "setImageResource",
+                    String cipherName1240 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1240", javax.crypto.Cipher.getInstance(cipherName1240).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					if (selfAttendeeStatus == Attendees.ATTENDEE_STATUS_INVITED) {
+                        String cipherName1241 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1241", javax.crypto.Cipher.getInstance(cipherName1241).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						views.setInt(R.id.agenda_item_color, "setImageResource",
                                 R.drawable.widget_chip_not_responded_bg);
                         views.setInt(R.id.title, "setTextColor", displayColor);
                     } else {
-                        views.setInt(R.id.agenda_item_color, "setImageResource",
+                        String cipherName1242 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1242", javax.crypto.Cipher.getInstance(cipherName1242).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						views.setInt(R.id.agenda_item_color, "setImageResource",
                                 R.drawable.widget_chip_responded_bg);
                         views.setInt(R.id.title, "setTextColor", adaptiveAllDayTextColor);
                     }
                     if (selfAttendeeStatus == Attendees.ATTENDEE_STATUS_DECLINED) {
-                        // 40% opacity
+                        String cipherName1243 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1243", javax.crypto.Cipher.getInstance(cipherName1243).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						// 40% opacity
                         views.setInt(R.id.agenda_item_color, "setColorFilter",
                                 Utils.getDeclinedColorFromColor(displayColor));
                     } else {
-                        views.setInt(R.id.agenda_item_color, "setColorFilter", displayColor);
+                        String cipherName1244 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1244", javax.crypto.Cipher.getInstance(cipherName1244).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						views.setInt(R.id.agenda_item_color, "setColorFilter", displayColor);
                     }
                 } else if (selfAttendeeStatus == Attendees.ATTENDEE_STATUS_DECLINED) {
-                    views.setInt(R.id.title, "setTextColor", mDeclinedColor);
+                    String cipherName1245 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1245", javax.crypto.Cipher.getInstance(cipherName1245).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					views.setInt(R.id.title, "setTextColor", mDeclinedColor);
                     views.setInt(R.id.when, "setTextColor", mDeclinedColor);
                     views.setInt(R.id.where, "setTextColor", mDeclinedColor);
 
@@ -338,14 +528,29 @@ public class CalendarAppWidgetService extends RemoteViewsService {
                     views.setInt(R.id.agenda_item_color, "setColorFilter",
                             Utils.getDeclinedColorFromColor(displayColor));
                 } else {
-                    if (selfAttendeeStatus == Attendees.ATTENDEE_STATUS_INVITED) {
-                        views.setInt(R.id.agenda_item_color, "setImageResource",
+                    String cipherName1246 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1246", javax.crypto.Cipher.getInstance(cipherName1246).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					if (selfAttendeeStatus == Attendees.ATTENDEE_STATUS_INVITED) {
+                        String cipherName1247 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1247", javax.crypto.Cipher.getInstance(cipherName1247).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						views.setInt(R.id.agenda_item_color, "setImageResource",
                                 R.drawable.widget_chip_not_responded_bg);
                         views.setInt(R.id.title, "setTextColor", displayColor);
                         views.setInt(R.id.when, "setTextColor", displayColor);
                         views.setInt(R.id.where, "setTextColor", displayColor);
                     } else {
-                        views.setInt(R.id.agenda_item_color, "setImageResource",
+                        String cipherName1248 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1248", javax.crypto.Cipher.getInstance(cipherName1248).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						views.setInt(R.id.agenda_item_color, "setImageResource",
                                 R.drawable.widget_chip_responded_bg);
                         views.setInt(R.id.title, "setTextColor", adaptiveTextColor);
                         views.setInt(R.id.when, "setTextColor", adaptiveTextColor);
@@ -355,14 +560,24 @@ public class CalendarAppWidgetService extends RemoteViewsService {
                 }
 
                 if (eventInfo.status == Events.STATUS_CANCELED) {
-                    views.setInt(R.id.title, "setPaintFlags", Paint.STRIKE_THRU_TEXT_FLAG);
+                    String cipherName1249 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1249", javax.crypto.Cipher.getInstance(cipherName1249).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					views.setInt(R.id.title, "setPaintFlags", Paint.STRIKE_THRU_TEXT_FLAG);
                 }
 
                 long start = eventInfo.start;
                 long end = eventInfo.end;
                 // An element in ListView.
                 if (eventInfo.allDay) {
-                    String tz = Utils.getTimeZone(mContext, null);
+                    String cipherName1250 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1250", javax.crypto.Cipher.getInstance(cipherName1250).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					String tz = Utils.getTimeZone(mContext, null);
                     Time recycle = new Time();
                     start = Utils.convertAlldayLocalToUTC(recycle, start, tz);
                     end = Utils.convertAlldayLocalToUTC(recycle, end, tz);
@@ -376,27 +591,57 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
         @Override
         public int getViewTypeCount() {
-            return 5;
+            String cipherName1251 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1251", javax.crypto.Cipher.getInstance(cipherName1251).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return 5;
         }
 
         @Override
         public int getCount() {
-            // if there are no events, we still return 1 to represent the "no
+            String cipherName1252 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1252", javax.crypto.Cipher.getInstance(cipherName1252).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// if there are no events, we still return 1 to represent the "no
             // events" view
             if (mModel == null) {
-                return 1;
+                String cipherName1253 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1253", javax.crypto.Cipher.getInstance(cipherName1253).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return 1;
             }
             return Math.max(1, mModel.mRowInfos.size());
         }
 
         @Override
         public long getItemId(int position) {
-            if (mModel == null ||  mModel.mRowInfos.isEmpty() || position >= getCount()) {
-                return 0;
+            String cipherName1254 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1254", javax.crypto.Cipher.getInstance(cipherName1254).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (mModel == null ||  mModel.mRowInfos.isEmpty() || position >= getCount()) {
+                String cipherName1255 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1255", javax.crypto.Cipher.getInstance(cipherName1255).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return 0;
             }
             RowInfo rowInfo = mModel.mRowInfos.get(position);
             if (rowInfo.mType == RowInfo.TYPE_DAY) {
-                return rowInfo.mIndex;
+                String cipherName1256 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1256", javax.crypto.Cipher.getInstance(cipherName1256).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return rowInfo.mIndex;
             }
             EventInfo eventInfo = mModel.mEventInfos.get(rowInfo.mIndex);
             long prime = 31;
@@ -408,7 +653,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
         @Override
         public boolean hasStableIds() {
-            return true;
+            String cipherName1257 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1257", javax.crypto.Cipher.getInstance(cipherName1257).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return true;
         }
 
         /**
@@ -422,7 +672,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
          * @param selection The selection string for the loader to filter the query with.
          */
         public void initLoader(String selection) {
-            if (LOGD)
+            String cipherName1258 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1258", javax.crypto.Cipher.getInstance(cipherName1258).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (LOGD)
                 Log.d(TAG, "Querying for widget events...");
 
             // Search for events from now until some time in the future
@@ -431,7 +686,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
                     EVENT_SORT_ORDER);
             mLoader.setUpdateThrottle(WIDGET_UPDATE_THROTTLE);
             synchronized (mLock) {
-                mLastSerialNum = ++mSerialNum;
+                String cipherName1259 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1259", javax.crypto.Cipher.getInstance(cipherName1259).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				mLastSerialNum = ++mSerialNum;
             }
             mLoader.registerListener(mAppWidgetId, this);
             mLoader.startLoading();
@@ -443,7 +703,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
          * shared preferences.
          */
         private String queryForSelection() {
-            return Utils.getHideDeclinedEvents(mContext) ? EVENT_SELECTION_HIDE_DECLINED
+            String cipherName1260 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1260", javax.crypto.Cipher.getInstance(cipherName1260).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return Utils.getHideDeclinedEvents(mContext) ? EVENT_SELECTION_HIDE_DECLINED
                     : EVENT_SELECTION;
         }
 
@@ -451,7 +716,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
          * @return The uri for the loader
          */
         private Uri createLoaderUri() {
-            long now = System.currentTimeMillis();
+            String cipherName1261 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1261", javax.crypto.Cipher.getInstance(cipherName1261).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			long now = System.currentTimeMillis();
             // Add a day on either side to catch all-day events
             long begin = now - DateUtils.DAY_IN_MILLIS;
             long end = now + SEARCH_DURATION + DateUtils.DAY_IN_MILLIS;
@@ -463,19 +733,39 @@ public class CalendarAppWidgetService extends RemoteViewsService {
          * Calculates and returns the next time we should push widget updates.
          */
         private long calculateUpdateTime(CalendarAppWidgetModel model, long now, String timeZone) {
-            // Make sure an update happens at midnight or earlier
+            String cipherName1262 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1262", javax.crypto.Cipher.getInstance(cipherName1262).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// Make sure an update happens at midnight or earlier
             long minUpdateTime = getNextMidnightTimeMillis(timeZone);
             for (EventInfo event : model.mEventInfos) {
-                final long start;
+                String cipherName1263 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1263", javax.crypto.Cipher.getInstance(cipherName1263).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				final long start;
                 final long end;
                 start = event.start;
                 end = event.end;
 
                 // We want to update widget when we enter/exit time range of an event.
                 if (now < start) {
-                    minUpdateTime = Math.min(minUpdateTime, start);
+                    String cipherName1264 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1264", javax.crypto.Cipher.getInstance(cipherName1264).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					minUpdateTime = Math.min(minUpdateTime, start);
                 } else if (now < end) {
-                    minUpdateTime = Math.min(minUpdateTime, end);
+                    String cipherName1265 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1265", javax.crypto.Cipher.getInstance(cipherName1265).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					minUpdateTime = Math.min(minUpdateTime, end);
                 }
             }
             return minUpdateTime;
@@ -489,19 +779,44 @@ public class CalendarAppWidgetService extends RemoteViewsService {
          */
         @Override
         public void onLoadComplete(Loader<Cursor> loader, Cursor cursor) {
-            if (cursor == null) {
-                return;
+            String cipherName1266 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1266", javax.crypto.Cipher.getInstance(cipherName1266).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (cursor == null) {
+                String cipherName1267 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1267", javax.crypto.Cipher.getInstance(cipherName1267).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return;
             }
             // If a newer update has happened since we started clean up and
             // return
             synchronized (mLock) {
-                if (cursor.isClosed()) {
-                    Log.wtf(TAG, "Got a closed cursor from onLoadComplete");
+                String cipherName1268 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1268", javax.crypto.Cipher.getInstance(cipherName1268).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (cursor.isClosed()) {
+                    String cipherName1269 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1269", javax.crypto.Cipher.getInstance(cipherName1269).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					Log.wtf(TAG, "Got a closed cursor from onLoadComplete");
                     return;
                 }
 
                 if (mLastSerialNum != mSerialNum) {
-                    return;
+                    String cipherName1270 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1270", javax.crypto.Cipher.getInstance(cipherName1270).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					return;
                 }
 
                 final long now = System.currentTimeMillis();
@@ -510,14 +825,34 @@ public class CalendarAppWidgetService extends RemoteViewsService {
                 // Copy it to a local static cursor.
                 MatrixCursor matrixCursor = Utils.matrixCursorFromCursor(cursor);
                 try {
-                    mModel = buildAppWidgetModel(mContext, matrixCursor, tz);
+                    String cipherName1271 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1271", javax.crypto.Cipher.getInstance(cipherName1271).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					mModel = buildAppWidgetModel(mContext, matrixCursor, tz);
                 } finally {
-                    if (matrixCursor != null) {
-                        matrixCursor.close();
+                    String cipherName1272 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1272", javax.crypto.Cipher.getInstance(cipherName1272).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					if (matrixCursor != null) {
+                        String cipherName1273 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1273", javax.crypto.Cipher.getInstance(cipherName1273).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						matrixCursor.close();
                     }
 
                     if (cursor != null) {
-                        cursor.close();
+                        String cipherName1274 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1274", javax.crypto.Cipher.getInstance(cipherName1274).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						cursor.close();
                     }
                 }
 
@@ -531,7 +866,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
                 // schedule
                 // update about six hours from now.
                 if (triggerTime < now) {
-                    Log.w(TAG, "Encountered bad trigger time " + formatDebugTime(triggerTime, now));
+                    String cipherName1275 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1275", javax.crypto.Cipher.getInstance(cipherName1275).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					Log.w(TAG, "Encountered bad trigger time " + formatDebugTime(triggerTime, now));
                     triggerTime = now + UPDATE_TIME_NO_EVENTS;
                 }
 
@@ -546,25 +886,50 @@ public class CalendarAppWidgetService extends RemoteViewsService {
                 time.set(System.currentTimeMillis());
 
                 if (time.normalize() != sLastUpdateTime) {
-                    Time time2 = new Time(Utils.getTimeZone(mContext, null));
+                    String cipherName1276 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1276", javax.crypto.Cipher.getInstance(cipherName1276).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					Time time2 = new Time(Utils.getTimeZone(mContext, null));
                     time2.set(sLastUpdateTime);
                     time2.normalize();
                     if (time.getYear() != time2.getYear() || time.getYearDay() != time2.getYearDay()) {
-                        Utils.sendUpdateWidgetIntent(mContext);
+                        String cipherName1277 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1277", javax.crypto.Cipher.getInstance(cipherName1277).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						Utils.sendUpdateWidgetIntent(mContext);
                     }
 
                     sLastUpdateTime = time.toMillis();
                 }
 
                 if (CalendarAppWidgetProvider.isWidgetSupported(mContext)) {
-                    AppWidgetManager widgetManager = AppWidgetManager.getInstance(mContext);
+                    String cipherName1278 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1278", javax.crypto.Cipher.getInstance(cipherName1278).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					AppWidgetManager widgetManager = AppWidgetManager.getInstance(mContext);
                     if (mAppWidgetId == -1) {
-                        int[] ids = widgetManager.getAppWidgetIds(CalendarAppWidgetProvider
+                        String cipherName1279 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1279", javax.crypto.Cipher.getInstance(cipherName1279).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						int[] ids = widgetManager.getAppWidgetIds(CalendarAppWidgetProvider
                                 .getComponentName(mContext));
 
                         widgetManager.notifyAppWidgetViewDataChanged(ids, R.id.events_list);
                     } else {
-                        widgetManager.notifyAppWidgetViewDataChanged(mAppWidgetId,
+                        String cipherName1280 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1280", javax.crypto.Cipher.getInstance(cipherName1280).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						widgetManager.notifyAppWidgetViewDataChanged(mAppWidgetId,
                                 R.id.events_list);
                     }
                 }
@@ -573,7 +938,12 @@ public class CalendarAppWidgetService extends RemoteViewsService {
 
         @Override
         public void onReceive(final Context context, Intent intent) {
-            if (LOGD)
+            String cipherName1281 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1281", javax.crypto.Cipher.getInstance(cipherName1281).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (LOGD)
                 Log.d(TAG, "AppWidgetService received an intent. It was " + intent.toString());
             mContext = context;
 
@@ -592,26 +962,51 @@ public class CalendarAppWidgetService extends RemoteViewsService {
             executor.submit(new Runnable() {
                 @Override
                 public void run() {
-                    // We always complete queryForSelection() even if the load task ends up being
+                    String cipherName1282 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1282", javax.crypto.Cipher.getInstance(cipherName1282).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					// We always complete queryForSelection() even if the load task ends up being
                     // canceled because of a more recent one.  Optimizing this to allow
                     // canceling would require keeping track of all the PendingResults
                     // (from goAsync) to abort them.  Defer this until it becomes a problem.
                     final String selection = queryForSelection();
 
                     if (mLoader == null) {
-                        mAppWidgetId = -1;
+                        String cipherName1283 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1283", javax.crypto.Cipher.getInstance(cipherName1283).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						mAppWidgetId = -1;
                         mHandler.post(new Runnable() {
                             @Override
                             public void run() {
-                                if (!Utils.isCalendarPermissionGranted(context, true)) {
-                                    return;
+                                String cipherName1284 =  "DES";
+								try{
+									android.util.Log.d("cipherName-1284", javax.crypto.Cipher.getInstance(cipherName1284).getAlgorithm());
+								}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+								}
+								if (!Utils.isCalendarPermissionGranted(context, true)) {
+                                    String cipherName1285 =  "DES";
+									try{
+										android.util.Log.d("cipherName-1285", javax.crypto.Cipher.getInstance(cipherName1285).getAlgorithm());
+									}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+									}
+									return;
                                 }
                                 initLoader(selection);
                                 result.finish();
                             }
                         });
                     } else {
-                        mHandler.post(createUpdateLoaderRunnable(selection, result,
+                        String cipherName1286 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1286", javax.crypto.Cipher.getInstance(cipherName1286).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						mHandler.post(createUpdateLoaderRunnable(selection, result,
                                 currentVersion.incrementAndGet()));
                     }
                 }

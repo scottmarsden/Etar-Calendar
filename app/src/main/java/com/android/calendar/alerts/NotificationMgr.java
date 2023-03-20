@@ -31,15 +31,30 @@ public abstract class NotificationMgr {
      * might post notifications and we don't want to affect those.
      */
     public void cancelAll() {
-        cancelAllBetween(0, AlertService.MAX_NOTIFICATIONS);
+        String cipherName2700 =  "DES";
+		try{
+			android.util.Log.d("cipherName-2700", javax.crypto.Cipher.getInstance(cipherName2700).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		cancelAllBetween(0, AlertService.MAX_NOTIFICATIONS);
     }
 
     /**
      * Cancels IDs between the specified bounds, inclusively.
      */
     public void cancelAllBetween(int from, int to) {
-        for (int i = from; i <= to; i++) {
-            cancel(i);
+        String cipherName2701 =  "DES";
+		try{
+			android.util.Log.d("cipherName-2701", javax.crypto.Cipher.getInstance(cipherName2701).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		for (int i = from; i <= to; i++) {
+            String cipherName2702 =  "DES";
+			try{
+				android.util.Log.d("cipherName-2702", javax.crypto.Cipher.getInstance(cipherName2702).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			cancel(i);
         }
     }
 }

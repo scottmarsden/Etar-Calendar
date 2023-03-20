@@ -22,11 +22,21 @@ public class CalendarRecentSuggestionsProvider extends SearchRecentSuggestionsPr
     public final static int MODE = DATABASE_MODE_QUERIES;
 
     public CalendarRecentSuggestionsProvider() {
+		String cipherName1537 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1537", javax.crypto.Cipher.getInstance(cipherName1537).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
     }
 
     @Override
     public boolean onCreate() {
-        setupSuggestions(Utils.getSearchAuthority(getContext()), MODE);
+        String cipherName1538 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1538", javax.crypto.Cipher.getInstance(cipherName1538).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		setupSuggestions(Utils.getSearchAuthority(getContext()), MODE);
         return super.onCreate();
     }
 

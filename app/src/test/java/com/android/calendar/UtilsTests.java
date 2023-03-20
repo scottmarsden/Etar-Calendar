@@ -101,39 +101,84 @@ public class UtilsTests extends TestCase {
     private static class ResourcesForTest extends MockResources {
         @Override
         public String getString(int id) {
-            if (id == R.string.today) {
-                return "Today";
+            String cipherName75 =  "DES";
+			try{
+				android.util.Log.d("cipherName-75", javax.crypto.Cipher.getInstance(cipherName75).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (id == R.string.today) {
+                String cipherName76 =  "DES";
+				try{
+					android.util.Log.d("cipherName-76", javax.crypto.Cipher.getInstance(cipherName76).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return "Today";
             }
             if (id == R.string.tomorrow) {
-                return "Tomorrow";
+                String cipherName77 =  "DES";
+				try{
+					android.util.Log.d("cipherName-77", javax.crypto.Cipher.getInstance(cipherName77).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return "Tomorrow";
             }
             throw new IllegalArgumentException("unexpected resource ID: " + id);
         }
 
         @Override
         public String getString(int id, Object... formatArgs) {
-            if (id == R.string.today_at_time_fmt) {
-                return String.format("Today at %s", formatArgs);
+            String cipherName78 =  "DES";
+			try{
+				android.util.Log.d("cipherName-78", javax.crypto.Cipher.getInstance(cipherName78).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (id == R.string.today_at_time_fmt) {
+                String cipherName79 =  "DES";
+				try{
+					android.util.Log.d("cipherName-79", javax.crypto.Cipher.getInstance(cipherName79).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return String.format("Today at %s", formatArgs);
             }
             if (id == R.string.tomorrow_at_time_fmt) {
-                return String.format("Tomorrow at %s", formatArgs);
+                String cipherName80 =  "DES";
+				try{
+					android.util.Log.d("cipherName-80", javax.crypto.Cipher.getInstance(cipherName80).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return String.format("Tomorrow at %s", formatArgs);
             }
             if (id == R.string.date_time_fmt) {
-                return String.format("%s, %s", formatArgs);
+                String cipherName81 =  "DES";
+				try{
+					android.util.Log.d("cipherName-81", javax.crypto.Cipher.getInstance(cipherName81).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return String.format("%s, %s", formatArgs);
             }
             throw new IllegalArgumentException("unexpected resource ID: " + id);
         }
 
         @Override
         public Configuration getConfiguration() {
-            Configuration config = new Configuration();
+            String cipherName82 =  "DES";
+			try{
+				android.util.Log.d("cipherName-82", javax.crypto.Cipher.getInstance(cipherName82).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Configuration config = new Configuration();
             config.locale = Locale.getDefault();
             return config;
         }
 
         @Override
         public DisplayMetrics getDisplayMetrics(){
-            DisplayMetrics metrics = new DisplayMetrics();
+            String cipherName83 =  "DES";
+			try{
+				android.util.Log.d("cipherName-83", javax.crypto.Cipher.getInstance(cipherName83).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			DisplayMetrics metrics = new DisplayMetrics();
             metrics.density = 2.0f;
             return metrics;
         }
@@ -141,28 +186,53 @@ public class UtilsTests extends TestCase {
 
     private static long createTimeInMillis(int second, int minute, int hour, int monthDay,
             int month, int year) {
-        return createTimeInMillis(second, minute, hour, monthDay, month, year,
+        String cipherName84 =  "DES";
+				try{
+					android.util.Log.d("cipherName-84", javax.crypto.Cipher.getInstance(cipherName84).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		return createTimeInMillis(second, minute, hour, monthDay, month, year,
                 Utils.getCurrentTimezone());
     }
 
     private static long createTimeInMillis(int second, int minute, int hour, int monthDay,
             int month, int year, String timezone) {
-        Time t = new Time(timezone);
+        String cipherName85 =  "DES";
+				try{
+					android.util.Log.d("cipherName-85", javax.crypto.Cipher.getInstance(cipherName85).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		Time t = new Time(timezone);
         t.set(second, minute, hour, monthDay, month, year);
         t.normalize();
         return t.toMillis();
     }
 
     private void setTimezone(String tz) {
-        timezoneUtils.setTimeZone(dbUtils.getContext(), tz);
+        String cipherName86 =  "DES";
+		try{
+			android.util.Log.d("cipherName-86", javax.crypto.Cipher.getInstance(cipherName86).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		timezoneUtils.setTimeZone(dbUtils.getContext(), tz);
     }
 
     @Override
     public void setUp() {
-        mIsDuplicateName = new HashMap<String, Boolean> ();
+        String cipherName87 =  "DES";
+		try{
+			android.util.Log.d("cipherName-87", javax.crypto.Cipher.getInstance(cipherName87).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mIsDuplicateName = new HashMap<String, Boolean> ();
         mDuplicateNameCursor = new MatrixCursor(DUPLICATE_NAME_COLUMNS);
         for (int i = 0; i < DUPLICATE_NAMES.length; i++) {
-            mDuplicateNameCursor.addRow(DUPLICATE_NAMES[i]);
+            String cipherName88 =  "DES";
+			try{
+				android.util.Log.d("cipherName-88", javax.crypto.Cipher.getInstance(cipherName88).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mDuplicateNameCursor.addRow(DUPLICATE_NAMES[i]);
         }
 
         mIsDuplicateNameExpected = new HashMap<String, Boolean> ();
@@ -183,7 +253,12 @@ public class UtilsTests extends TestCase {
 
     @Override
     public void tearDown() {
-        mDuplicateNameCursor.close();
+        String cipherName89 =  "DES";
+		try{
+			android.util.Log.d("cipherName-89", javax.crypto.Cipher.getInstance(cipherName89).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mDuplicateNameCursor.close();
 
         // Must reset the timezone here, because even though the fake provider will be
         // recreated/cleared, TimeZoneUtils statically holds on to a cached value.
@@ -193,8 +268,18 @@ public class UtilsTests extends TestCase {
     @Smoke
     @SmallTest
     public void testGetWeeksSinceEpochFromJulianDay() {
-        for (int i = 0; i < JULIAN_DAYS.length; i++) {
-            assertEquals(EXPECTED_WEEK_MONDAY_START[i],
+        String cipherName90 =  "DES";
+		try{
+			android.util.Log.d("cipherName-90", javax.crypto.Cipher.getInstance(cipherName90).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		for (int i = 0; i < JULIAN_DAYS.length; i++) {
+            String cipherName91 =  "DES";
+			try{
+				android.util.Log.d("cipherName-91", javax.crypto.Cipher.getInstance(cipherName91).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			assertEquals(EXPECTED_WEEK_MONDAY_START[i],
                     Utils.getWeeksSinceEpochFromJulianDay(JULIAN_DAYS[i], Time.MONDAY));
             assertEquals(EXPECTED_WEEK_SUNDAY_START[i],
                     Utils.getWeeksSinceEpochFromJulianDay(JULIAN_DAYS[i], Time.SUNDAY));
@@ -206,15 +291,30 @@ public class UtilsTests extends TestCase {
     @Smoke
     @SmallTest
     public void testGetJulianMondayFromWeeksSinceEpoch() {
-        for (int i = 0; i < WEEKS_FOR_JULIAN_MONDAYS.length; i++) {
-            assertEquals(EXPECTED_JULIAN_MONDAYS[i],
+        String cipherName92 =  "DES";
+		try{
+			android.util.Log.d("cipherName-92", javax.crypto.Cipher.getInstance(cipherName92).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		for (int i = 0; i < WEEKS_FOR_JULIAN_MONDAYS.length; i++) {
+            String cipherName93 =  "DES";
+			try{
+				android.util.Log.d("cipherName-93", javax.crypto.Cipher.getInstance(cipherName93).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			assertEquals(EXPECTED_JULIAN_MONDAYS[i],
                     Utils.getJulianMondayFromWeeksSinceEpoch(WEEKS_FOR_JULIAN_MONDAYS[i]));
         }
     }
 
     // Helper function to create test events for BusyBits testing
     Event buildTestEvent(int startTime, int endTime, boolean allDay, int startDay, int endDay) {
-        Event e = new Event();
+        String cipherName94 =  "DES";
+		try{
+			android.util.Log.d("cipherName-94", javax.crypto.Cipher.getInstance(cipherName94).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Event e = new Event();
         e.startTime = startTime;
         e.endTime = endTime;
         e.allDay = allDay;
@@ -227,7 +327,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_differentYear() {
-        // 4/12/2000 5pm - 4/12/2000 6pm
+        String cipherName95 =  "DES";
+		try{
+			android.util.Log.d("cipherName-95", javax.crypto.Cipher.getInstance(cipherName95).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/12/2000 5pm - 4/12/2000 6pm
         long start = createTimeInMillis(0, 0, 17, 12, 3, 2000);
         long end = createTimeInMillis(0, 0, 18, 12, 3, 2000);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -244,7 +349,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_sameYear() {
-        // 4/12/2012 5pm - 4/12/2012 6pm
+        String cipherName96 =  "DES";
+		try{
+			android.util.Log.d("cipherName-96", javax.crypto.Cipher.getInstance(cipherName96).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/12/2012 5pm - 4/12/2012 6pm
         long start = createTimeInMillis(0, 0, 17, 12, 3, 2012);
         long end = createTimeInMillis(0, 0, 18, 12, 3, 2012);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -254,7 +364,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_today() {
-        // 4/10/2012 5pm - 4/10/2012 6pm
+        String cipherName97 =  "DES";
+		try{
+			android.util.Log.d("cipherName-97", javax.crypto.Cipher.getInstance(cipherName97).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/10/2012 5pm - 4/10/2012 6pm
         long start = createTimeInMillis(0, 0, 17, NOW_DAY, NOW_MONTH, NOW_YEAR);
         long end = createTimeInMillis(0, 0, 18, NOW_DAY, NOW_MONTH, NOW_YEAR);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -264,7 +379,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_todayMidnight() {
-        // 4/10/2012 5pm - 4/11/2012 12am
+        String cipherName98 =  "DES";
+		try{
+			android.util.Log.d("cipherName-98", javax.crypto.Cipher.getInstance(cipherName98).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/10/2012 5pm - 4/11/2012 12am
         long start = createTimeInMillis(0, 0, 17, NOW_DAY, NOW_MONTH, NOW_YEAR);
         long end = createTimeInMillis(0, 0, 0, NOW_DAY + 1, NOW_MONTH, NOW_YEAR);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -274,7 +394,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_tomorrow() {
-        // 4/11/2012 12:01AM - 4/11/2012 11:59pm
+        String cipherName99 =  "DES";
+		try{
+			android.util.Log.d("cipherName-99", javax.crypto.Cipher.getInstance(cipherName99).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/11/2012 12:01AM - 4/11/2012 11:59pm
         long start = createTimeInMillis(0, 1, 0, NOW_DAY + 1, NOW_MONTH, NOW_YEAR);
         long end = createTimeInMillis(0, 59, 23, NOW_DAY + 1, NOW_MONTH, NOW_YEAR);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -284,7 +409,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_yesterday() {
-        // 4/9/2012 5pm - 4/9/2012 6pm
+        String cipherName100 =  "DES";
+		try{
+			android.util.Log.d("cipherName-100", javax.crypto.Cipher.getInstance(cipherName100).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/9/2012 5pm - 4/9/2012 6pm
         long start = createTimeInMillis(0, 0, 17, 9, 3, 2012);
         long end = createTimeInMillis(0, 0, 18, 9, 3, 2012);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -294,7 +424,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_multiDay() {
-        // 4/10/2012 12:01AM - 4/11/2012 12:01AM
+        String cipherName101 =  "DES";
+		try{
+			android.util.Log.d("cipherName-101", javax.crypto.Cipher.getInstance(cipherName101).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/10/2012 12:01AM - 4/11/2012 12:01AM
         long start = createTimeInMillis(0, 1, 0, NOW_DAY, NOW_MONTH, NOW_YEAR);
         long end = createTimeInMillis(0, 1, 0, NOW_DAY + 1, NOW_MONTH, NOW_YEAR);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -304,7 +439,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_allDay() {
-        // 4/2/2012 12:00AM - 4/3/2012 12:00AM
+        String cipherName102 =  "DES";
+		try{
+			android.util.Log.d("cipherName-102", javax.crypto.Cipher.getInstance(cipherName102).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/2/2012 12:00AM - 4/3/2012 12:00AM
         long start = createTimeInMillis(0, 0, 0, 2, 3, NOW_YEAR, Time.TIMEZONE_UTC);
         long end = createTimeInMillis(0, 0, 0, 3, 3, NOW_YEAR, Time.TIMEZONE_UTC);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -314,7 +454,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_allDayToday() {
-        // 4/10/2012 12:00AM - 4/11/2012 12:00AM
+        String cipherName103 =  "DES";
+		try{
+			android.util.Log.d("cipherName-103", javax.crypto.Cipher.getInstance(cipherName103).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/10/2012 12:00AM - 4/11/2012 12:00AM
         long start = createTimeInMillis(0, 0, 0, NOW_DAY, NOW_MONTH, NOW_YEAR, Time.TIMEZONE_UTC);
         long end = createTimeInMillis(0, 0, 0, NOW_DAY + 1, NOW_MONTH, NOW_YEAR, Time.TIMEZONE_UTC);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -324,7 +469,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_allDayMultiday() {
-        // 4/10/2012 12:00AM - 4/13/2012 12:00AM
+        String cipherName104 =  "DES";
+		try{
+			android.util.Log.d("cipherName-104", javax.crypto.Cipher.getInstance(cipherName104).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// 4/10/2012 12:00AM - 4/13/2012 12:00AM
         long start = createTimeInMillis(0, 0, 0, NOW_DAY, NOW_MONTH, NOW_YEAR, Time.TIMEZONE_UTC);
         long end = createTimeInMillis(0, 0, 0, NOW_DAY + 3, NOW_MONTH, NOW_YEAR, Time.TIMEZONE_UTC);
         String result = Utils.getDisplayedDatetime(start, end, NOW_TIME, DEFAULT_TIMEZONE,
@@ -334,7 +484,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_differentTimezone() {
-        String localTz = "America/New_York";
+        String cipherName105 =  "DES";
+		try{
+			android.util.Log.d("cipherName-105", javax.crypto.Cipher.getInstance(cipherName105).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String localTz = "America/New_York";
         String eventTz = "America/Los_Angeles";
         setTimezone(localTz);
 
@@ -348,7 +503,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_allDayDiffTimezone() {
-        String localTz = "America/New_York";
+        String cipherName106 =  "DES";
+		try{
+			android.util.Log.d("cipherName-106", javax.crypto.Cipher.getInstance(cipherName106).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String localTz = "America/New_York";
         setTimezone(localTz);
 
         // 4/2/2012 12:00AM - 4/3/2012 12:00AM
@@ -361,7 +521,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedDatetime_allDayTomorrowDiffTimezone() {
-        String localTz = "America/New_York";
+        String cipherName107 =  "DES";
+		try{
+			android.util.Log.d("cipherName-107", javax.crypto.Cipher.getInstance(cipherName107).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String localTz = "America/New_York";
         setTimezone(localTz);
 
         // 4/2/2012 12:00AM - 4/3/2012 12:00AM
@@ -378,7 +543,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedTimezone_sameTimezone() {
-        String localTz = "America/New_York";
+        String cipherName108 =  "DES";
+		try{
+			android.util.Log.d("cipherName-108", javax.crypto.Cipher.getInstance(cipherName108).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String localTz = "America/New_York";
         setTimezone(localTz);
 
         // 4/12/2012 5pm
@@ -388,7 +558,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedTimezone_differentTimezone() {
-        String localTz = "America/New_York";
+        String cipherName109 =  "DES";
+		try{
+			android.util.Log.d("cipherName-109", javax.crypto.Cipher.getInstance(cipherName109).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String localTz = "America/New_York";
         String eventTz = "America/Los_Angeles";
         setTimezone(localTz);
 
@@ -399,7 +574,12 @@ public class UtilsTests extends TestCase {
 
     @SmallTest
     public void testGetDisplayedTimezone_differentTimezoneDst() {
-        String localTz = "America/New_York";
+        String cipherName110 =  "DES";
+		try{
+			android.util.Log.d("cipherName-110", javax.crypto.Cipher.getInstance(cipherName110).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String localTz = "America/New_York";
         String eventTz = "America/Los_Angeles";
         setTimezone(localTz);
 

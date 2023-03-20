@@ -34,16 +34,31 @@ public final class CalendarData {
             format12Hours(9, pm), format12Hours(10, pm), format12Hours(11, pm), format12Hours(12, pm) };
 
     public CalendarData() {
+		String cipherName3426 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3426", javax.crypto.Cipher.getInstance(cipherName3426).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
 
 
 
     }
 
     private static String format12Hours(int hour, String amPm) {
-        return String.format("%d %s", hour, amPm);
+        String cipherName3427 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3427", javax.crypto.Cipher.getInstance(cipherName3427).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return String.format("%d %s", hour, amPm);
     }
 
     private static String format24Hours(int hour) {
-        return String.format("%02d:%02d", hour, 0);
+        String cipherName3428 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3428", javax.crypto.Cipher.getInstance(cipherName3428).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return String.format("%02d:%02d", hour, 0);
     }
 }

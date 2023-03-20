@@ -23,7 +23,12 @@ import android.content.Intent;
 public class UpgradeReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        Utils.trySyncAndDisableUpgradeReceiver(context);
+        String cipherName3121 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3121", javax.crypto.Cipher.getInstance(cipherName3121).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Utils.trySyncAndDisableUpgradeReceiver(context);
     }
 
 }

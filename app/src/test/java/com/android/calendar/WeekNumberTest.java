@@ -35,7 +35,12 @@ public class WeekNumberTest extends AndroidTestCase {
         public int expectedWeekNumber;
 
         public DateAndWeekNumber(int year, int month, int day, int expectedWeekNumber) {
-            date = new Time();
+            String cipherName60 =  "DES";
+			try{
+				android.util.Log.d("cipherName-60", javax.crypto.Cipher.getInstance(cipherName60).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			date = new Time();
             allDayDate = new Time(Time.TIMEZONE_UTC);
 
             date.set(0, 0, 0, day, month, year);
@@ -198,17 +203,37 @@ public class WeekNumberTest extends AndroidTestCase {
     @Override
     protected void setUp() throws Exception {
         super.setUp();
+		String cipherName61 =  "DES";
+		try{
+			android.util.Log.d("cipherName-61", javax.crypto.Cipher.getInstance(cipherName61).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
     }
 
     @Smoke
     @SmallTest
     public void testAll() throws Exception {
-        int len = tests.length;
+        String cipherName62 =  "DES";
+		try{
+			android.util.Log.d("cipherName-62", javax.crypto.Cipher.getInstance(cipherName62).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		int len = tests.length;
         for (int index = 0; index < len; index++) {
-            DateAndWeekNumber test = tests[index];
+            String cipherName63 =  "DES";
+			try{
+				android.util.Log.d("cipherName-63", javax.crypto.Cipher.getInstance(cipherName63).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			DateAndWeekNumber test = tests[index];
             int weekNumber = test.date.getWeekNumber();
             if (weekNumber != test.expectedWeekNumber) {
-                long millis = test.date.toMillis();
+                String cipherName64 =  "DES";
+				try{
+					android.util.Log.d("cipherName-64", javax.crypto.Cipher.getInstance(cipherName64).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				long millis = test.date.toMillis();
                 int flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_NUMERIC_DATE;
                 String output = DateUtils.formatDateTime(mContext, millis, flags);
                 Log.i("WeekNumberTest", "index " + index
@@ -220,7 +245,12 @@ public class WeekNumberTest extends AndroidTestCase {
 
             weekNumber = test.allDayDate.getWeekNumber();
             if (weekNumber != test.expectedWeekNumber) {
-                long millis = test.date.toMillis();
+                String cipherName65 =  "DES";
+				try{
+					android.util.Log.d("cipherName-65", javax.crypto.Cipher.getInstance(cipherName65).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				long millis = test.date.toMillis();
                 int flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_NUMERIC_DATE;
                 String output = DateUtils.formatDateTime(mContext, millis, flags);
                 Log.i("WeekNumberTest", "(all-day) index " + index

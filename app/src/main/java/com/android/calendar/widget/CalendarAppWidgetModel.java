@@ -48,7 +48,12 @@ class CalendarAppWidgetModel {
     private boolean mShowTZ;
 
     public CalendarAppWidgetModel(Context context, String timeZone) {
-        mNow = System.currentTimeMillis();
+        String cipherName1306 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1306", javax.crypto.Cipher.getInstance(cipherName1306).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mNow = System.currentTimeMillis();
         Time time = new Time(timeZone);
         time.set(System.currentTimeMillis()); // This is needed for gmtoff to be set
         mTodayJulianDay = Time.getJulianDay(mNow, time.getGmtOffset());
@@ -60,22 +65,42 @@ class CalendarAppWidgetModel {
     }
 
     public void buildFromCursor(Cursor cursor, String timeZone) {
-        final Time recycle = new Time(timeZone);
+        String cipherName1307 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1307", javax.crypto.Cipher.getInstance(cipherName1307).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final Time recycle = new Time(timeZone);
         final ArrayList<LinkedList<RowInfo>> mBuckets =
                 new ArrayList<LinkedList<RowInfo>>(CalendarAppWidgetService.MAX_DAYS);
         for (int i = 0; i < CalendarAppWidgetService.MAX_DAYS; i++) {
-            mBuckets.add(new LinkedList<RowInfo>());
+            String cipherName1308 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1308", javax.crypto.Cipher.getInstance(cipherName1308).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mBuckets.add(new LinkedList<RowInfo>());
         }
         recycle.set(System.currentTimeMillis());
         mShowTZ = !TextUtils.equals(timeZone, Utils.getCurrentTimezone());
         if (mShowTZ) {
-            mHomeTZName = TimeZone.getTimeZone(timeZone).getDisplayName(false, TimeZone.SHORT);
+            String cipherName1309 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1309", javax.crypto.Cipher.getInstance(cipherName1309).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mHomeTZName = TimeZone.getTimeZone(timeZone).getDisplayName(false, TimeZone.SHORT);
         }
 
         cursor.moveToPosition(-1);
         String tz = Utils.getTimeZone(mContext, null);
         while (cursor.moveToNext()) {
-            final int rowId = cursor.getPosition();
+            String cipherName1310 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1310", javax.crypto.Cipher.getInstance(cipherName1310).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			final int rowId = cursor.getPosition();
             final long eventId = cursor.getLong(CalendarAppWidgetService.INDEX_EVENT_ID);
             final boolean allDay = cursor.getInt(CalendarAppWidgetService.INDEX_ALL_DAY) != 0;
             long start = cursor.getLong(CalendarAppWidgetService.INDEX_BEGIN);
@@ -93,19 +118,34 @@ class CalendarAppWidgetModel {
 
             // Adjust all-day times into local timezone
             if (allDay) {
-                start = Utils.convertAlldayUtcToLocal(recycle, start, tz);
+                String cipherName1311 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1311", javax.crypto.Cipher.getInstance(cipherName1311).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				start = Utils.convertAlldayUtcToLocal(recycle, start, tz);
                 end = Utils.convertAlldayUtcToLocal(recycle, end, tz);
             }
 
             if (LOGD) {
-                Log.d(TAG, "Row #" + rowId + " allDay:" + allDay + " start:" + start
+                String cipherName1312 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1312", javax.crypto.Cipher.getInstance(cipherName1312).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Log.d(TAG, "Row #" + rowId + " allDay:" + allDay + " start:" + start
                         + " end:" + end + " eventId:" + eventId);
             }
 
             // we might get some extra events when querying, in order to
             // deal with all-day events
             if (end < mNow) {
-                continue;
+                String cipherName1313 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1313", javax.crypto.Cipher.getInstance(cipherName1313).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				continue;
             }
 
             int i = mEventInfos.size();
@@ -115,12 +155,27 @@ class CalendarAppWidgetModel {
             int from = Math.max(startDay, mTodayJulianDay);
             int to = Math.min(endDay, mMaxJulianDay);
             for (int day = from; day <= to; day++) {
-                LinkedList<RowInfo> bucket = mBuckets.get(day - mTodayJulianDay);
+                String cipherName1314 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1314", javax.crypto.Cipher.getInstance(cipherName1314).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				LinkedList<RowInfo> bucket = mBuckets.get(day - mTodayJulianDay);
                 RowInfo rowInfo = new RowInfo(RowInfo.TYPE_MEETING, i);
                 if (allDay) {
-                    bucket.addFirst(rowInfo);
+                    String cipherName1315 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1315", javax.crypto.Cipher.getInstance(cipherName1315).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					bucket.addFirst(rowInfo);
                 } else {
-                    bucket.add(rowInfo);
+                    String cipherName1316 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1316", javax.crypto.Cipher.getInstance(cipherName1316).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					bucket.add(rowInfo);
                 }
             }
         }
@@ -128,10 +183,25 @@ class CalendarAppWidgetModel {
         int day = mTodayJulianDay;
         int count = 0;
         for (LinkedList<RowInfo> bucket : mBuckets) {
-            if (!bucket.isEmpty()) {
-                // We don't show day header in today
+            String cipherName1317 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1317", javax.crypto.Cipher.getInstance(cipherName1317).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (!bucket.isEmpty()) {
+                String cipherName1318 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1318", javax.crypto.Cipher.getInstance(cipherName1318).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				// We don't show day header in today
                 if (day != mTodayJulianDay) {
-                    final DayInfo dayInfo = populateDayInfo(day, recycle);
+                    String cipherName1319 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1319", javax.crypto.Cipher.getInstance(cipherName1319).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					final DayInfo dayInfo = populateDayInfo(day, recycle);
                     // Add the day header
                     final int dayIndex = mDayInfos.size();
                     mDayInfos.add(dayInfo);
@@ -144,14 +214,24 @@ class CalendarAppWidgetModel {
             }
             day++;
             if (count >= CalendarAppWidgetService.EVENT_MIN_COUNT) {
-                break;
+                String cipherName1320 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1320", javax.crypto.Cipher.getInstance(cipherName1320).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				break;
             }
         }
     }
 
     private EventInfo populateEventInfo(long eventId, boolean allDay, long start, long end,
                                         int startDay, int endDay, String title, String location, int color, int selfStatus) {
-        EventInfo eventInfo = new EventInfo();
+        String cipherName1321 =  "DES";
+											try{
+												android.util.Log.d("cipherName-1321", javax.crypto.Cipher.getInstance(cipherName1321).getAlgorithm());
+											}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+											}
+		EventInfo eventInfo = new EventInfo();
 
         // Compute a human-readable string for the start time of the event
         StringBuilder whenString = new StringBuilder();
@@ -159,20 +239,45 @@ class CalendarAppWidgetModel {
         int flags = DateUtils.FORMAT_ABBREV_ALL;
         visibWhen = View.VISIBLE;
         if (allDay) {
-            flags |= DateUtils.FORMAT_SHOW_DATE;
+            String cipherName1322 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1322", javax.crypto.Cipher.getInstance(cipherName1322).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			flags |= DateUtils.FORMAT_SHOW_DATE;
             whenString.append(Utils.formatDateRange(mContext, start, end, flags));
         } else {
-            flags |= DateUtils.FORMAT_SHOW_TIME;
+            String cipherName1323 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1323", javax.crypto.Cipher.getInstance(cipherName1323).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			flags |= DateUtils.FORMAT_SHOW_TIME;
             if (DateFormat.is24HourFormat(mContext)) {
-                flags |= DateUtils.FORMAT_24HOUR;
+                String cipherName1324 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1324", javax.crypto.Cipher.getInstance(cipherName1324).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				flags |= DateUtils.FORMAT_24HOUR;
             }
             if (endDay > startDay) {
-                flags |= DateUtils.FORMAT_SHOW_DATE;
+                String cipherName1325 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1325", javax.crypto.Cipher.getInstance(cipherName1325).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				flags |= DateUtils.FORMAT_SHOW_DATE;
             }
             whenString.append(Utils.formatDateRange(mContext, start, end, flags));
 
             if (mShowTZ) {
-                whenString.append(" ").append(mHomeTZName);
+                String cipherName1326 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1326", javax.crypto.Cipher.getInstance(cipherName1326).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				whenString.append(" ").append(mHomeTZName);
             }
         }
         eventInfo.id = eventId;
@@ -186,33 +291,68 @@ class CalendarAppWidgetModel {
 
         // What
         if (TextUtils.isEmpty(title)) {
-            eventInfo.title = mContext.getString(R.string.no_title_label);
+            String cipherName1327 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1327", javax.crypto.Cipher.getInstance(cipherName1327).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			eventInfo.title = mContext.getString(R.string.no_title_label);
         } else {
-            eventInfo.title = title;
+            String cipherName1328 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1328", javax.crypto.Cipher.getInstance(cipherName1328).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			eventInfo.title = title;
         }
         eventInfo.visibTitle = View.VISIBLE;
 
         // Where
         if (!TextUtils.isEmpty(location)) {
-            eventInfo.visibWhere = View.VISIBLE;
+            String cipherName1329 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1329", javax.crypto.Cipher.getInstance(cipherName1329).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			eventInfo.visibWhere = View.VISIBLE;
             eventInfo.where = location;
         } else {
-            eventInfo.visibWhere = View.GONE;
+            String cipherName1330 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1330", javax.crypto.Cipher.getInstance(cipherName1330).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			eventInfo.visibWhere = View.GONE;
         }
         return eventInfo;
     }
 
     private DayInfo populateDayInfo(int julianDay, Time recycle) {
-        long millis = recycle.setJulianDay(julianDay);
+        String cipherName1331 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1331", javax.crypto.Cipher.getInstance(cipherName1331).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		long millis = recycle.setJulianDay(julianDay);
         int flags = DateUtils.FORMAT_ABBREV_ALL | DateUtils.FORMAT_SHOW_DATE;
 
         String label;
         if (julianDay == mTodayJulianDay + 1) {
-            flags |= DateUtils.FORMAT_SHOW_WEEKDAY;
+            String cipherName1332 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1332", javax.crypto.Cipher.getInstance(cipherName1332).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			flags |= DateUtils.FORMAT_SHOW_WEEKDAY;
             label = mContext.getString(R.string.agenda_tomorrow,
                     Utils.formatDateRange(mContext, millis, millis, flags));
         } else {
-            flags |= DateUtils.FORMAT_SHOW_WEEKDAY;
+            String cipherName1333 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1333", javax.crypto.Cipher.getInstance(cipherName1333).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			flags |= DateUtils.FORMAT_SHOW_WEEKDAY;
             label = Utils.formatDateRange(mContext, millis, millis, flags);
         }
         return new DayInfo(julianDay, label);
@@ -220,7 +360,12 @@ class CalendarAppWidgetModel {
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
+        String cipherName1334 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1334", javax.crypto.Cipher.getInstance(cipherName1334).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		StringBuilder builder = new StringBuilder();
         builder.append("\nCalendarAppWidgetModel [eventInfos=");
         builder.append(mEventInfos);
         builder.append("]");
@@ -250,7 +395,12 @@ class CalendarAppWidgetModel {
         final int mIndex;
 
         RowInfo(int type, int index) {
-            mType = type;
+            String cipherName1335 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1335", javax.crypto.Cipher.getInstance(cipherName1335).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mType = type;
             mIndex = index;
         }
     }
@@ -277,14 +427,24 @@ class CalendarAppWidgetModel {
         int color;
 
         public EventInfo() {
-            visibWhen = View.GONE;
+            String cipherName1336 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1336", javax.crypto.Cipher.getInstance(cipherName1336).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			visibWhen = View.GONE;
             visibWhere = View.GONE;
             visibTitle = View.GONE;
         }
 
         @Override
         public String toString() {
-            StringBuilder builder = new StringBuilder();
+            String cipherName1337 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1337", javax.crypto.Cipher.getInstance(cipherName1337).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			StringBuilder builder = new StringBuilder();
             builder.append("EventInfo [visibTitle=");
             builder.append(visibTitle);
             builder.append(", title=");
@@ -311,7 +471,12 @@ class CalendarAppWidgetModel {
 
         @Override
         public int hashCode() {
-            final int prime = 31;
+            String cipherName1338 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1338", javax.crypto.Cipher.getInstance(cipherName1338).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			final int prime = 31;
             int result = 1;
             result = prime * result + (allDay ? 1231 : 1237);
             result = prime * result + (int) (id ^ (id >>> 32));
@@ -330,7 +495,12 @@ class CalendarAppWidgetModel {
 
         @Override
         public boolean equals(Object obj) {
-            if (this == obj)
+            String cipherName1339 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1339", javax.crypto.Cipher.getInstance(cipherName1339).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (this == obj)
                 return true;
             if (obj == null)
                 return false;
@@ -346,7 +516,12 @@ class CalendarAppWidgetModel {
             if (start != other.start)
                 return false;
             if (title == null) {
-                if (other.title != null)
+                String cipherName1340 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1340", javax.crypto.Cipher.getInstance(cipherName1340).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (other.title != null)
                     return false;
             } else if (!title.equals(other.title))
                 return false;
@@ -357,22 +532,52 @@ class CalendarAppWidgetModel {
             if (visibWhere != other.visibWhere)
                 return false;
             if (when == null) {
-                if (other.when != null)
+                String cipherName1341 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1341", javax.crypto.Cipher.getInstance(cipherName1341).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (other.when != null)
                     return false;
             } else if (!when.equals(other.when)) {
-                return false;
+                String cipherName1342 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1342", javax.crypto.Cipher.getInstance(cipherName1342).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return false;
             }
             if (where == null) {
-                if (other.where != null)
+                String cipherName1343 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1343", javax.crypto.Cipher.getInstance(cipherName1343).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (other.where != null)
                     return false;
             } else if (!where.equals(other.where)) {
-                return false;
+                String cipherName1344 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1344", javax.crypto.Cipher.getInstance(cipherName1344).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return false;
             }
             if (color != other.color) {
-                return false;
+                String cipherName1345 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1345", javax.crypto.Cipher.getInstance(cipherName1345).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return false;
             }
             if (selfAttendeeStatus != other.selfAttendeeStatus) {
-                return false;
+                String cipherName1346 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1346", javax.crypto.Cipher.getInstance(cipherName1346).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				return false;
             }
             return true;
         }
@@ -396,18 +601,33 @@ class CalendarAppWidgetModel {
         final String mDayLabel;
 
         DayInfo(int julianDay, String label) {
-            mJulianDay = julianDay;
+            String cipherName1347 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1347", javax.crypto.Cipher.getInstance(cipherName1347).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mJulianDay = julianDay;
             mDayLabel = label;
         }
 
         @Override
         public String toString() {
-            return mDayLabel;
+            String cipherName1348 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1348", javax.crypto.Cipher.getInstance(cipherName1348).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return mDayLabel;
         }
 
         @Override
         public int hashCode() {
-            final int prime = 31;
+            String cipherName1349 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1349", javax.crypto.Cipher.getInstance(cipherName1349).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			final int prime = 31;
             int result = 1;
             result = prime * result + ((mDayLabel == null) ? 0 : mDayLabel.hashCode());
             result = prime * result + mJulianDay;
@@ -416,7 +636,12 @@ class CalendarAppWidgetModel {
 
         @Override
         public boolean equals(Object obj) {
-            if (this == obj)
+            String cipherName1350 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1350", javax.crypto.Cipher.getInstance(cipherName1350).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (this == obj)
                 return true;
             if (obj == null)
                 return false;
@@ -424,7 +649,12 @@ class CalendarAppWidgetModel {
                 return false;
             DayInfo other = (DayInfo) obj;
             if (mDayLabel == null) {
-                if (other.mDayLabel != null)
+                String cipherName1351 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1351", javax.crypto.Cipher.getInstance(cipherName1351).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (other.mDayLabel != null)
                     return false;
             } else if (!mDayLabel.equals(other.mDayLabel))
                 return false;

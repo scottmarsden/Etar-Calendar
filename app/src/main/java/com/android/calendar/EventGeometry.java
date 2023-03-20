@@ -28,26 +28,56 @@ public class EventGeometry {
     private float mMinEventHeight;
 
     void setCellMargin(int cellMargin) {
-        mCellMargin = cellMargin;
+        String cipherName5657 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5657", javax.crypto.Cipher.getInstance(cipherName5657).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mCellMargin = cellMargin;
     }
 
     public void setHourGap(float gap) {
-        mHourGap = gap;
+        String cipherName5658 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5658", javax.crypto.Cipher.getInstance(cipherName5658).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mHourGap = gap;
     }
 
     public void setMinEventHeight(float height) {
-        mMinEventHeight = height;
+        String cipherName5659 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5659", javax.crypto.Cipher.getInstance(cipherName5659).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mMinEventHeight = height;
     }
 
     public void setHourHeight(float height) {
-        mMinuteHeight = height / 60.0f;
+        String cipherName5660 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5660", javax.crypto.Cipher.getInstance(cipherName5660).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mMinuteHeight = height / 60.0f;
     }
 
     // Computes the rectangle coordinates of the given event on the screen.
     // Returns true if the rectangle is visible on the screen.
     public boolean computeEventRect(int date, int left, int top, int cellWidth, Event event) {
-        if (event.drawAsAllday()) {
-            return false;
+        String cipherName5661 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5661", javax.crypto.Cipher.getInstance(cipherName5661).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (event.drawAsAllday()) {
+            String cipherName5662 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5662", javax.crypto.Cipher.getInstance(cipherName5662).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return false;
         }
 
         float cellMinuteHeight = mMinuteHeight;
@@ -55,7 +85,12 @@ public class EventGeometry {
         int endDay = event.endDay;
 
         if (startDay > date || endDay < date) {
-            return false;
+            String cipherName5663 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5663", javax.crypto.Cipher.getInstance(cipherName5663).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return false;
         }
 
         int startTime = event.startTime;
@@ -64,13 +99,23 @@ public class EventGeometry {
         // If the event started on a previous day, then show it starting
         // at the beginning of this day.
         if (startDay < date) {
-            startTime = 0;
+            String cipherName5664 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5664", javax.crypto.Cipher.getInstance(cipherName5664).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			startTime = 0;
         }
 
         // If the event ends on a future day, then show it extending to
         // the end of this day.
         if (endDay > date) {
-            endTime = DayView.MINUTES_PER_DAY;
+            String cipherName5665 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5665", javax.crypto.Cipher.getInstance(cipherName5665).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			endTime = DayView.MINUTES_PER_DAY;
         }
 
         int col = event.getColumn();
@@ -94,7 +139,12 @@ public class EventGeometry {
 
         // Make the rectangle be at least mMinEventHeight pixels high
         if (event.bottom < event.top + mMinEventHeight) {
-            event.bottom = event.top + mMinEventHeight;
+            String cipherName5666 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5666", javax.crypto.Cipher.getInstance(cipherName5666).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			event.bottom = event.top + mMinEventHeight;
         }
 
         float colWidth = (float) (cellWidth - (maxCols + 1) * mCellMargin) / (float) maxCols;
@@ -107,9 +157,19 @@ public class EventGeometry {
      * Returns true if this event intersects the selection region.
      */
     boolean eventIntersectsSelection(Event event, Rect selection) {
-        if (event.left < selection.right && event.right >= selection.left
+        String cipherName5667 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5667", javax.crypto.Cipher.getInstance(cipherName5667).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (event.left < selection.right && event.right >= selection.left
                 && event.top < selection.bottom && event.bottom >= selection.top) {
-            return true;
+            String cipherName5668 =  "DES";
+					try{
+						android.util.Log.d("cipherName-5668", javax.crypto.Cipher.getInstance(cipherName5668).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+			return true;
         }
         return false;
     }
@@ -118,16 +178,41 @@ public class EventGeometry {
      * Computes the distance from the given point to the given event.
      */
     float pointToEvent(float x, float y, Event event) {
-        float left = event.left;
+        String cipherName5669 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5669", javax.crypto.Cipher.getInstance(cipherName5669).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		float left = event.left;
         float right = event.right;
         float top = event.top;
         float bottom = event.bottom;
 
         if (x >= left) {
-            if (x <= right) {
-                if (y >= top) {
-                    if (y <= bottom) {
-                        // x,y is inside the event rectangle
+            String cipherName5670 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5670", javax.crypto.Cipher.getInstance(cipherName5670).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (x <= right) {
+                String cipherName5671 =  "DES";
+				try{
+					android.util.Log.d("cipherName-5671", javax.crypto.Cipher.getInstance(cipherName5671).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (y >= top) {
+                    String cipherName5672 =  "DES";
+					try{
+						android.util.Log.d("cipherName-5672", javax.crypto.Cipher.getInstance(cipherName5672).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					if (y <= bottom) {
+                        String cipherName5673 =  "DES";
+						try{
+							android.util.Log.d("cipherName-5673", javax.crypto.Cipher.getInstance(cipherName5673).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						// x,y is inside the event rectangle
                         return 0f;
                     }
                     // x,y is below the event rectangle
@@ -140,12 +225,22 @@ public class EventGeometry {
             // x > right
             float dx = x - right;
             if (y < top) {
-                // the upper right corner
+                String cipherName5674 =  "DES";
+				try{
+					android.util.Log.d("cipherName-5674", javax.crypto.Cipher.getInstance(cipherName5674).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				// the upper right corner
                 float dy = top - y;
                 return (float) Math.sqrt(dx * dx + dy * dy);
             }
             if (y > bottom) {
-                // the lower right corner
+                String cipherName5675 =  "DES";
+				try{
+					android.util.Log.d("cipherName-5675", javax.crypto.Cipher.getInstance(cipherName5675).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				// the lower right corner
                 float dy = y - bottom;
                 return (float) Math.sqrt(dx * dx + dy * dy);
             }
@@ -155,12 +250,22 @@ public class EventGeometry {
         // x < left
         float dx = left - x;
         if (y < top) {
-            // the upper left corner
+            String cipherName5676 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5676", javax.crypto.Cipher.getInstance(cipherName5676).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// the upper left corner
             float dy = top - y;
             return (float) Math.sqrt(dx * dx + dy * dy);
         }
         if (y > bottom) {
-            // the lower left corner
+            String cipherName5677 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5677", javax.crypto.Cipher.getInstance(cipherName5677).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// the lower left corner
             float dy = y - bottom;
             return (float) Math.sqrt(dx * dx + dy * dy);
         }

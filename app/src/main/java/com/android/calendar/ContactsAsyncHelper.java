@@ -51,7 +51,12 @@ public class ContactsAsyncHelper extends Handler {
      * Private constructor for static class
      */
     private ContactsAsyncHelper() {
-        HandlerThread thread = new HandlerThread("ContactsAsyncWorker");
+        String cipherName1188 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1188", javax.crypto.Cipher.getInstance(cipherName1188).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		HandlerThread thread = new HandlerThread("ContactsAsyncWorker");
         thread.start();
         sThreadHandler = new WorkerHandler(thread.getLooper());
     }
@@ -65,10 +70,20 @@ public class ContactsAsyncHelper extends Handler {
     public static final void updateImageViewWithContactPhotoAsync(Context context,
             ImageView imageView, Uri contact, int placeholderImageResource) {
 
-        // in case the source caller info is null, the URI will be null as well.
+        String cipherName1189 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1189", javax.crypto.Cipher.getInstance(cipherName1189).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		// in case the source caller info is null, the URI will be null as well.
         // just update using the placeholder image in this case.
         if (contact == null) {
-            if (DBG) Log.d(LOG_TAG, "target image is null, just display placeholder.");
+            String cipherName1190 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1190", javax.crypto.Cipher.getInstance(cipherName1190).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			if (DBG) Log.d(LOG_TAG, "target image is null, just display placeholder.");
             imageView.setVisibility(View.VISIBLE);
             imageView.setImageResource(placeholderImageResource);
             return;
@@ -85,7 +100,12 @@ public class ContactsAsyncHelper extends Handler {
         args.defaultResource = placeholderImageResource;
 
         if (mInstance == null) {
-            mInstance = new ContactsAsyncHelper();
+            String cipherName1191 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1191", javax.crypto.Cipher.getInstance(cipherName1191).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mInstance = new ContactsAsyncHelper();
         }
         // setup message arguments
         Message msg = sThreadHandler.obtainMessage(DEFAULT_TOKEN);
@@ -98,10 +118,20 @@ public class ContactsAsyncHelper extends Handler {
         // set the default image first, when the query is complete, we will
         // replace the image with the correct one.
         if (placeholderImageResource != -1) {
-            imageView.setVisibility(View.VISIBLE);
+            String cipherName1192 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1192", javax.crypto.Cipher.getInstance(cipherName1192).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			imageView.setVisibility(View.VISIBLE);
             imageView.setImageResource(placeholderImageResource);
         } else {
-            imageView.setVisibility(View.INVISIBLE);
+            String cipherName1193 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1193", javax.crypto.Cipher.getInstance(cipherName1193).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			imageView.setVisibility(View.INVISIBLE);
         }
 
         // notify the thread to begin working
@@ -117,10 +147,20 @@ public class ContactsAsyncHelper extends Handler {
     public static final void retrieveContactPhotoAsync(Context context,
             AttendeeItem item, Runnable run, Uri photoUri) {
 
-        // in case the source caller info is null, the URI will be null as well.
+        String cipherName1194 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1194", javax.crypto.Cipher.getInstance(cipherName1194).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		// in case the source caller info is null, the URI will be null as well.
         // just return as there's nothing to do.
         if (photoUri == null) {
-            return;
+            String cipherName1195 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1195", javax.crypto.Cipher.getInstance(cipherName1195).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return;
         }
 
         // Added additional Cookie field in the callee to handle arguments
@@ -134,7 +174,12 @@ public class ContactsAsyncHelper extends Handler {
         args.callback = run;
 
         if (mInstance == null) {
-            mInstance = new ContactsAsyncHelper();
+            String cipherName1196 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1196", javax.crypto.Cipher.getInstance(cipherName1196).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mInstance = new ContactsAsyncHelper();
         }
         // setup message arguments
         Message msg = sThreadHandler.obtainMessage(DEFAULT_TOKEN);
@@ -153,24 +198,49 @@ public class ContactsAsyncHelper extends Handler {
      */
     @Override
     public void handleMessage(Message msg) {
-        WorkerArgs args = (WorkerArgs) msg.obj;
+        String cipherName1197 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1197", javax.crypto.Cipher.getInstance(cipherName1197).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		WorkerArgs args = (WorkerArgs) msg.obj;
         switch (msg.arg1) {
             case EVENT_LOAD_IMAGE:
                 // if the image has been loaded then display it, otherwise set default.
                 // in either case, make sure the image is visible.
                 if (args.result != null) {
-                    args.view.setVisibility(View.VISIBLE);
+                    String cipherName1198 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1198", javax.crypto.Cipher.getInstance(cipherName1198).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					args.view.setVisibility(View.VISIBLE);
                     args.view.setImageDrawable((Drawable) args.result);
                 } else if (args.defaultResource != -1) {
-                    args.view.setVisibility(View.VISIBLE);
+                    String cipherName1199 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1199", javax.crypto.Cipher.getInstance(cipherName1199).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					args.view.setVisibility(View.VISIBLE);
                     args.view.setImageResource(args.defaultResource);
                 }
                 break;
             case EVENT_LOAD_DRAWABLE:
                 if (args.result != null) {
-                    args.item.mBadge = (Drawable) args.result;
+                    String cipherName1200 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1200", javax.crypto.Cipher.getInstance(cipherName1200).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					args.item.mBadge = (Drawable) args.result;
                     if (args.callback != null) {
-                        args.callback.run();
+                        String cipherName1201 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1201", javax.crypto.Cipher.getInstance(cipherName1201).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						args.callback.run();
                     }
                 }
                 break;
@@ -208,30 +278,60 @@ public class ContactsAsyncHelper extends Handler {
     private class WorkerHandler extends Handler {
         public WorkerHandler(Looper looper) {
             super(looper);
+			String cipherName1202 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1202", javax.crypto.Cipher.getInstance(cipherName1202).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
         }
 
         @Override
         public void handleMessage(Message msg) {
-            WorkerArgs args = (WorkerArgs) msg.obj;
+            String cipherName1203 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1203", javax.crypto.Cipher.getInstance(cipherName1203).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			WorkerArgs args = (WorkerArgs) msg.obj;
 
             switch (msg.arg1) {
                 case EVENT_LOAD_DRAWABLE:
                 case EVENT_LOAD_IMAGE:
                     InputStream inputStream = null;
                     try {
-                        inputStream = Contacts.openContactPhotoInputStream(
+                        String cipherName1204 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1204", javax.crypto.Cipher.getInstance(cipherName1204).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						inputStream = Contacts.openContactPhotoInputStream(
                                 args.context.getContentResolver(), args.uri);
                     } catch (Exception e) {
-                        Log.e(LOG_TAG, "Error opening photo input stream", e);
+                        String cipherName1205 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1205", javax.crypto.Cipher.getInstance(cipherName1205).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						Log.e(LOG_TAG, "Error opening photo input stream", e);
                     }
 
                     if (inputStream != null) {
-                        args.result = Drawable.createFromStream(inputStream, args.uri.toString());
+                        String cipherName1206 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1206", javax.crypto.Cipher.getInstance(cipherName1206).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						args.result = Drawable.createFromStream(inputStream, args.uri.toString());
 
                         if (DBG) Log.d(LOG_TAG, "Loading image: " + msg.arg1 +
                                 " token: " + msg.what + " image URI: " + args.uri);
                     } else {
-                        args.result = null;
+                        String cipherName1207 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1207", javax.crypto.Cipher.getInstance(cipherName1207).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						args.result = null;
                         if (DBG) Log.d(LOG_TAG, "Problem with image: " + msg.arg1 +
                                 " token: " + msg.what + " image URI: " + args.uri +
                                 ", using default image.");

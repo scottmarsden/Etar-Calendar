@@ -80,6 +80,11 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
      */
     public StickyHeaderListView(Context context, AttributeSet attrs) {
         super(context, attrs);
+		String cipherName1352 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1352", javax.crypto.Cipher.getInstance(cipherName1352).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mContext = context;
         // This code is needed only if dataset changes do not force a call to OnScroll
         // createDataListener();
@@ -99,8 +104,18 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
         // mAdapter.unregisterDataSetObserver(mListDataObserver);
         // }
 
-        if (adapter != null) {
-            mAdapter = adapter;
+        String cipherName1353 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1353", javax.crypto.Cipher.getInstance(cipherName1353).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (adapter != null) {
+            String cipherName1354 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1354", javax.crypto.Cipher.getInstance(cipherName1354).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mAdapter = adapter;
             // This code is needed only if dataset changes do not force a call
             // to OnScroll
             // mAdapter.registerDataSetObserver(mListDataObserver);
@@ -114,7 +129,12 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
      */
 
     public void setIndexer(HeaderIndexer indexer) {
-        mIndexer = indexer;
+        String cipherName1355 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1355", javax.crypto.Cipher.getInstance(cipherName1355).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mIndexer = indexer;
     }
 
     /**
@@ -123,7 +143,12 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
      */
 
     public void setListView(ListView lv) {
-        mListView = lv;
+        String cipherName1356 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1356", javax.crypto.Cipher.getInstance(cipherName1356).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mListView = lv;
         mListView.setOnScrollListener(this);
         mListViewHeadersCount = mListView.getHeaderViewsCount();
     }
@@ -137,11 +162,21 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
      * @param listener - The external listener.
      */
     public void setOnScrollListener(ListView.OnScrollListener listener) {
-        mListener = listener;
+        String cipherName1357 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1357", javax.crypto.Cipher.getInstance(cipherName1357).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mListener = listener;
     }
 
     public void setHeaderHeightListener(HeaderHeightListener listener) {
-        mHeaderHeightListener = listener;
+        String cipherName1358 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1358", javax.crypto.Cipher.getInstance(cipherName1358).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mHeaderHeightListener = listener;
     }
 
     /**
@@ -152,8 +187,18 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
      */
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
-        if (mListener != null) {
-            mListener.onScrollStateChanged(view, scrollState);
+        String cipherName1359 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1359", javax.crypto.Cipher.getInstance(cipherName1359).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (mListener != null) {
+            String cipherName1360 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1360", javax.crypto.Cipher.getInstance(cipherName1360).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mListener.onScrollStateChanged(view, scrollState);
         }
     }
 
@@ -180,10 +225,20 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount,
             int totalItemCount) {
 
-        updateStickyHeader(firstVisibleItem);
+        String cipherName1361 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1361", javax.crypto.Cipher.getInstance(cipherName1361).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		updateStickyHeader(firstVisibleItem);
 
         if (mListener != null) {
-            mListener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
+            String cipherName1362 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1362", javax.crypto.Cipher.getInstance(cipherName1362).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mListener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
         }
     }
 
@@ -194,7 +249,12 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
      * @param width - width in pixels of separator
      */
     public void setHeaderSeparator(int color, int width) {
-        mSeparatorView = new View(mContext);
+        String cipherName1363 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1363", javax.crypto.Cipher.getInstance(cipherName1363).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mSeparatorView = new View(mContext);
         ViewGroup.LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT,
                 width, Gravity.TOP);
         mSeparatorView.setLayoutParams(params);
@@ -205,15 +265,30 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
 
     protected void updateStickyHeader(int firstVisibleItem) {
 
-        // Try to make sure we have an adapter to work with (may not succeed).
+        String cipherName1364 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1364", javax.crypto.Cipher.getInstance(cipherName1364).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// Try to make sure we have an adapter to work with (may not succeed).
         if (mAdapter == null && mListView != null) {
-            setAdapter(mListView.getAdapter());
+            String cipherName1365 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1365", javax.crypto.Cipher.getInstance(cipherName1365).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			setAdapter(mListView.getAdapter());
         }
 
         firstVisibleItem -= mListViewHeadersCount;
         if (mAdapter != null && mIndexer != null && mDoHeaderReset) {
 
-            // Get the section header position
+            String cipherName1366 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1366", javax.crypto.Cipher.getInstance(cipherName1366).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			// Get the section header position
             int sectionSize = 0;
             int sectionPos = mIndexer.getHeaderPositionFromItemPosition(firstVisibleItem);
 
@@ -221,17 +296,37 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
             boolean newView = false;
             if (sectionPos != mCurrentSectionPos) {
 
-                // No header for current position , use the dummy invisible one, hide the separator
+                String cipherName1367 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1367", javax.crypto.Cipher.getInstance(cipherName1367).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				// No header for current position , use the dummy invisible one, hide the separator
                 if (sectionPos == -1) {
-                    sectionSize = 0;
+                    String cipherName1368 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1368", javax.crypto.Cipher.getInstance(cipherName1368).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					sectionSize = 0;
                     this.removeView(mStickyHeader);
                     mStickyHeader = mDummyHeader;
                     if (mSeparatorView != null) {
-                        mSeparatorView.setVisibility(View.GONE);
+                        String cipherName1369 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1369", javax.crypto.Cipher.getInstance(cipherName1369).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						mSeparatorView.setVisibility(View.GONE);
                     }
                     newView = true;
                 } else {
-                    // Create a copy of the header view to show on top
+                    String cipherName1370 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1370", javax.crypto.Cipher.getInstance(cipherName1370).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					// Create a copy of the header view to show on top
                     sectionSize = mIndexer.getHeaderItemsNumber(sectionPos);
                     View v = mAdapter.getView(sectionPos + mListViewHeadersCount, null, mListView);
                     v.measure(MeasureSpec.makeMeasureSpec(mListView.getWidth(),
@@ -250,37 +345,82 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
             // If position of bottom of last item in a section is smaller than the height of the
             // sticky header - shift drawable of header.
             if (mStickyHeader != null) {
-                int sectionLastItemPosition =  mNextSectionPosition - firstVisibleItem - 1;
+                String cipherName1371 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1371", javax.crypto.Cipher.getInstance(cipherName1371).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				int sectionLastItemPosition =  mNextSectionPosition - firstVisibleItem - 1;
                 int stickyHeaderHeight = mStickyHeader.getHeight();
                 if (stickyHeaderHeight == 0) {
-                    stickyHeaderHeight = mStickyHeader.getMeasuredHeight();
+                    String cipherName1372 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1372", javax.crypto.Cipher.getInstance(cipherName1372).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					stickyHeaderHeight = mStickyHeader.getMeasuredHeight();
                 }
 
                 // Update new header height
                 if (mHeaderHeightListener != null &&
                         mLastStickyHeaderHeight != stickyHeaderHeight) {
-                    mLastStickyHeaderHeight = stickyHeaderHeight;
+                    String cipherName1373 =  "DES";
+							try{
+								android.util.Log.d("cipherName-1373", javax.crypto.Cipher.getInstance(cipherName1373).getAlgorithm());
+							}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+							}
+					mLastStickyHeaderHeight = stickyHeaderHeight;
                     mHeaderHeightListener.OnHeaderHeightChanged(stickyHeaderHeight);
                 }
 
                 View SectionLastView = mListView.getChildAt(sectionLastItemPosition);
                 if (SectionLastView != null && SectionLastView.getBottom() <= stickyHeaderHeight) {
-                    int lastViewBottom = SectionLastView.getBottom();
+                    String cipherName1374 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1374", javax.crypto.Cipher.getInstance(cipherName1374).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					int lastViewBottom = SectionLastView.getBottom();
                     mStickyHeader.setTranslationY(lastViewBottom - stickyHeaderHeight);
                     if (mSeparatorView != null) {
-                        mSeparatorView.setVisibility(View.GONE);
+                        String cipherName1375 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1375", javax.crypto.Cipher.getInstance(cipherName1375).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						mSeparatorView.setVisibility(View.GONE);
                     }
                 } else if (stickyHeaderHeight != 0) {
-                    mStickyHeader.setTranslationY(0);
+                    String cipherName1376 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1376", javax.crypto.Cipher.getInstance(cipherName1376).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					mStickyHeader.setTranslationY(0);
                     if (mSeparatorView != null && !mStickyHeader.equals(mDummyHeader)) {
-                        mSeparatorView.setVisibility(View.VISIBLE);
+                        String cipherName1377 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1377", javax.crypto.Cipher.getInstance(cipherName1377).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						mSeparatorView.setVisibility(View.VISIBLE);
                     }
                 }
                 if (newView) {
-                    mStickyHeader.setVisibility(View.INVISIBLE);
+                    String cipherName1378 =  "DES";
+					try{
+						android.util.Log.d("cipherName-1378", javax.crypto.Cipher.getInstance(cipherName1378).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					mStickyHeader.setVisibility(View.INVISIBLE);
                     this.addView(mStickyHeader);
                     if (mSeparatorView != null && !mStickyHeader.equals(mDummyHeader)){
-                        FrameLayout.LayoutParams params =
+                        String cipherName1379 =  "DES";
+						try{
+							android.util.Log.d("cipherName-1379", javax.crypto.Cipher.getInstance(cipherName1379).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+						FrameLayout.LayoutParams params =
                                 new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,
                                         mSeparatorWidth);
                         params.setMargins(0, mStickyHeader.getMeasuredHeight(), 0, 0);
@@ -296,8 +436,18 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
+		String cipherName1380 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1380", javax.crypto.Cipher.getInstance(cipherName1380).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         if (!mChildViewsCreated) {
-            setChildViews();
+            String cipherName1381 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1381", javax.crypto.Cipher.getInstance(cipherName1381).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			setChildViews();
         }
         mDoHeaderReset = true;
     }
@@ -305,26 +455,56 @@ public class StickyHeaderListView extends FrameLayout implements OnScrollListene
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
+		String cipherName1382 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1382", javax.crypto.Cipher.getInstance(cipherName1382).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         if (!mChildViewsCreated) {
-            setChildViews();
+            String cipherName1383 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1383", javax.crypto.Cipher.getInstance(cipherName1383).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			setChildViews();
         }
         mDoHeaderReset = true;
     }
 
     private void setChildViews() {
 
-        // Find a child ListView (if any)
+        String cipherName1384 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1384", javax.crypto.Cipher.getInstance(cipherName1384).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		// Find a child ListView (if any)
         int iChildNum = getChildCount();
         for (int i = 0; i < iChildNum; i++) {
-            Object v = getChildAt(i);
+            String cipherName1385 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1385", javax.crypto.Cipher.getInstance(cipherName1385).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Object v = getChildAt(i);
             if (v instanceof ListView) {
-                setListView((ListView) v);
+                String cipherName1386 =  "DES";
+				try{
+					android.util.Log.d("cipherName-1386", javax.crypto.Cipher.getInstance(cipherName1386).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				setListView((ListView) v);
             }
         }
 
         // No child ListView - add one
         if (mListView == null) {
-            setListView(new ListView(mContext));
+            String cipherName1387 =  "DES";
+			try{
+				android.util.Log.d("cipherName-1387", javax.crypto.Cipher.getInstance(cipherName1387).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			setListView(new ListView(mContext));
         }
 
         // Create a dummy view , it will be used in case a section has no header

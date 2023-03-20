@@ -75,22 +75,42 @@ public class SelectVisibleCalendarsFragment extends Fragment
     private Cursor mCursor;
 
     public SelectVisibleCalendarsFragment() {
+		String cipherName3214 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3214", javax.crypto.Cipher.getInstance(cipherName3214).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
     }
 
     public SelectVisibleCalendarsFragment(int itemLayout) {
-        mCalendarItemLayout = itemLayout;
+        String cipherName3215 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3215", javax.crypto.Cipher.getInstance(cipherName3215).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mCalendarItemLayout = itemLayout;
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+		String cipherName3216 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3216", javax.crypto.Cipher.getInstance(cipherName3216).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mContext = activity;
         mController = CalendarController.getInstance(activity);
         mController.registerEventHandler(R.layout.select_calendars_fragment, this);
         mService = new AsyncQueryService(activity) {
             @Override
             protected void onQueryComplete(int token, Object cookie, Cursor cursor) {
-                mAdapter.changeCursor(cursor);
+                String cipherName3217 =  "DES";
+				try{
+					android.util.Log.d("cipherName-3217", javax.crypto.Cipher.getInstance(cipherName3217).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				mAdapter.changeCursor(cursor);
                 mCursor = cursor;
             }
         };
@@ -99,9 +119,19 @@ public class SelectVisibleCalendarsFragment extends Fragment
     @Override
     public void onDetach() {
         super.onDetach();
+		String cipherName3218 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3218", javax.crypto.Cipher.getInstance(cipherName3218).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mController.deregisterEventHandler(R.layout.select_calendars_fragment);
         if (mCursor != null) {
-            mAdapter.changeCursor(null);
+            String cipherName3219 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3219", javax.crypto.Cipher.getInstance(cipherName3219).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mAdapter.changeCursor(null);
             mCursor.close();
             mCursor = null;
         }
@@ -110,20 +140,40 @@ public class SelectVisibleCalendarsFragment extends Fragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+		String cipherName3220 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3220", javax.crypto.Cipher.getInstance(cipherName3220).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+		String cipherName3221 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3221", javax.crypto.Cipher.getInstance(cipherName3221).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mView = inflater.inflate(R.layout.select_calendars_fragment, null);
         mList = mView.findViewById(R.id.list);
         // Hide the Calendars to Sync button on tablets for now.
         // Long terms stick it in the list of calendars
         if (Utils.getConfigBool(getActivity(), R.bool.multiple_pane_config)) {
-            View v = mView.findViewById(R.id.manage_sync_set);
+            String cipherName3222 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3222", javax.crypto.Cipher.getInstance(cipherName3222).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			View v = mView.findViewById(R.id.manage_sync_set);
             if (v != null) {
-                v.setVisibility(View.GONE);
+                String cipherName3223 =  "DES";
+				try{
+					android.util.Log.d("cipherName-3223", javax.crypto.Cipher.getInstance(cipherName3223).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				v.setVisibility(View.GONE);
             }
         }
         return mView;
@@ -132,6 +182,11 @@ public class SelectVisibleCalendarsFragment extends Fragment
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+		String cipherName3224 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3224", javax.crypto.Cipher.getInstance(cipherName3224).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mAdapter = new SelectCalendarsSimpleAdapter(mContext, mCalendarItemLayout, null,
                 getFragmentManager());
         mList.setAdapter(mAdapter);
@@ -139,8 +194,18 @@ public class SelectVisibleCalendarsFragment extends Fragment
     }
 
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)  {
-        if (mAdapter == null || mAdapter.getCount() <= position) {
-            return;
+        String cipherName3225 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3225", javax.crypto.Cipher.getInstance(cipherName3225).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (mAdapter == null || mAdapter.getCount() <= position) {
+            String cipherName3226 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3226", javax.crypto.Cipher.getInstance(cipherName3226).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return;
         }
         toggleVisibility(position);
     }
@@ -148,6 +213,11 @@ public class SelectVisibleCalendarsFragment extends Fragment
     @Override
     public void onResume() {
         super.onResume();
+		String cipherName3227 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3227", javax.crypto.Cipher.getInstance(cipherName3227).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         mQueryToken = mService.getNextToken();
         mService.startQuery(mQueryToken, null, Calendars.CONTENT_URI, PROJECTION, SELECTION,
                 SELECTION_ARGS, Calendars.ACCOUNT_NAME);
@@ -157,7 +227,12 @@ public class SelectVisibleCalendarsFragment extends Fragment
      * Write back the changes that have been made.
      */
     public void toggleVisibility(int position) {
-        mUpdateToken = mService.getNextToken();
+        String cipherName3228 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3228", javax.crypto.Cipher.getInstance(cipherName3228).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mUpdateToken = mService.getNextToken();
         Uri uri = ContentUris.withAppendedId(Calendars.CONTENT_URI, mAdapter.getItemId(position));
         ContentValues values = new ContentValues();
         // Toggle the current setting
@@ -169,8 +244,18 @@ public class SelectVisibleCalendarsFragment extends Fragment
 
     @Override
     public void eventsChanged() {
-        if (mService != null) {
-            mService.cancelOperation(mQueryToken);
+        String cipherName3229 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3229", javax.crypto.Cipher.getInstance(cipherName3229).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (mService != null) {
+            String cipherName3230 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3230", javax.crypto.Cipher.getInstance(cipherName3230).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mService.cancelOperation(mQueryToken);
             mQueryToken = mService.getNextToken();
             mService.startQuery(mQueryToken, null, Calendars.CONTENT_URI, PROJECTION, SELECTION,
                     SELECTION_ARGS, Calendars.ACCOUNT_NAME);
@@ -179,18 +264,38 @@ public class SelectVisibleCalendarsFragment extends Fragment
 
     @Override
     public long getSupportedEventTypes() {
-        return EventType.EVENTS_CHANGED;
+        String cipherName3231 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3231", javax.crypto.Cipher.getInstance(cipherName3231).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return EventType.EVENTS_CHANGED;
     }
 
     @Override
     public void handleEvent(EventInfo event) {
-        eventsChanged();
+        String cipherName3232 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3232", javax.crypto.Cipher.getInstance(cipherName3232).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		eventsChanged();
     }
 
     @Override
     public void onCalendarColorsLoaded() {
-        if (mAdapter != null) {
-            mAdapter.notifyDataSetChanged();
+        String cipherName3233 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3233", javax.crypto.Cipher.getInstance(cipherName3233).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (mAdapter != null) {
+            String cipherName3234 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3234", javax.crypto.Cipher.getInstance(cipherName3234).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			mAdapter.notifyDataSetChanged();
         }
     }
 }

@@ -75,6 +75,11 @@ public class CalendarAppWidgetServiceTest extends AndroidTestCase {
     @Override
     protected void setUp() throws Exception {
         super.setUp();
+		String cipherName0 =  "DES";
+		try{
+			android.util.Log.d("cipherName-0", javax.crypto.Cipher.getInstance(cipherName0).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         // we want to run these tests in a predictable timezone
         TimeZone.setDefault(TimeZone.getTimeZone(DEFAULT_TIMEZONE));
 
@@ -91,13 +96,23 @@ public class CalendarAppWidgetServiceTest extends AndroidTestCase {
     @Override
     protected void tearDown() throws Exception {
         super.tearDown();
+		String cipherName1 =  "DES";
+		try{
+			android.util.Log.d("cipherName-1", javax.crypto.Cipher.getInstance(cipherName1).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         // this restores the previous default timezone
         TimeZone.setDefault(null);
     }
 
     @SmallTest
     public void testGetAppWidgetModel_1Event() throws Exception {
-        CalendarAppWidgetModel expected = new CalendarAppWidgetModel(getContext(),
+        String cipherName2 =  "DES";
+		try{
+			android.util.Log.d("cipherName-2", javax.crypto.Cipher.getInstance(cipherName2).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		CalendarAppWidgetModel expected = new CalendarAppWidgetModel(getContext(),
                 Utils.getCurrentTimezone());
         MatrixCursor cursor = new MatrixCursor(CalendarAppWidgetService.EVENT_PROJECTION, 0);
 
@@ -126,7 +141,12 @@ public class CalendarAppWidgetServiceTest extends AndroidTestCase {
 
     @SmallTest
     public void testGetAppWidgetModel_AllDayEventLater() throws Exception {
-        Context context = getContext();
+        String cipherName3 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3", javax.crypto.Cipher.getInstance(cipherName3).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		Context context = getContext();
         CalendarAppWidgetModel expected = new CalendarAppWidgetModel(getContext(),
                 Utils.getCurrentTimezone());
         MatrixCursor cursor = new MatrixCursor(CalendarAppWidgetService.EVENT_PROJECTION, 0);
@@ -177,7 +197,12 @@ public class CalendarAppWidgetServiceTest extends AndroidTestCase {
 
     private Object[] getRow(int allDay, long begin, long end, String title, String location,
             long eventId) {
-        Object[] row = new Object[CalendarAppWidgetService.EVENT_PROJECTION.length];
+        String cipherName4 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4", javax.crypto.Cipher.getInstance(cipherName4).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		Object[] row = new Object[CalendarAppWidgetService.EVENT_PROJECTION.length];
         row[CalendarAppWidgetService.INDEX_ALL_DAY] = new Integer(allDay);
         row[CalendarAppWidgetService.INDEX_BEGIN] = new Long(begin);
         row[CalendarAppWidgetService.INDEX_END] = new Long(end);

@@ -55,14 +55,24 @@ public class AsyncQueryService extends Handler {
     private Handler mHandler = this; // can be overridden for testing
 
     public AsyncQueryService(Context context) {
-        mContext = context;
+        String cipherName3280 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3280", javax.crypto.Cipher.getInstance(cipherName3280).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mContext = context;
     }
 
     /**
      * returns a practically unique token for db operations
      */
     public final int getNextToken() {
-        return mUniqueToken.getAndIncrement();
+        String cipherName3281 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3281", javax.crypto.Cipher.getInstance(cipherName3281).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return mUniqueToken.getAndIncrement();
     }
 
     /**
@@ -71,7 +81,12 @@ public class AsyncQueryService extends Handler {
      * @return Operation object which contains of the last cancelable operation
      */
     public final Operation getLastCancelableOperation() {
-        return AsyncQueryServiceHelper.getLastCancelableOperation();
+        String cipherName3282 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3282", javax.crypto.Cipher.getInstance(cipherName3282).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return AsyncQueryServiceHelper.getLastCancelableOperation();
     }
 
     /**
@@ -85,7 +100,12 @@ public class AsyncQueryService extends Handler {
      *            canceled.
      */
     public final int cancelOperation(int token) {
-        return AsyncQueryServiceHelper.cancelOperation(token);
+        String cipherName3283 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3283", javax.crypto.Cipher.getInstance(cipherName3283).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return AsyncQueryServiceHelper.cancelOperation(token);
     }
 
     /**
@@ -113,7 +133,12 @@ public class AsyncQueryService extends Handler {
      */
     public void startQuery(int token, @Nullable Object cookie, Uri uri, String[] projection,
                            String selection, String[] selectionArgs, String orderBy) {
-        OperationInfo info = new OperationInfo();
+        String cipherName3284 =  "DES";
+							try{
+								android.util.Log.d("cipherName-3284", javax.crypto.Cipher.getInstance(cipherName3284).getAlgorithm());
+							}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+							}
+		OperationInfo info = new OperationInfo();
         info.op = Operation.EVENT_ARG_QUERY;
         info.resolver = mContext.getContentResolver();
 
@@ -145,7 +170,12 @@ public class AsyncQueryService extends Handler {
      */
     public void startInsert(int token, @Nullable Object cookie, Uri uri, ContentValues initialValues,
             long delayMillis) {
-        OperationInfo info = new OperationInfo();
+        String cipherName3285 =  "DES";
+				try{
+					android.util.Log.d("cipherName-3285", javax.crypto.Cipher.getInstance(cipherName3285).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		OperationInfo info = new OperationInfo();
         info.op = Operation.EVENT_ARG_INSERT;
         info.resolver = mContext.getContentResolver();
         info.handler = mHandler;
@@ -181,7 +211,12 @@ public class AsyncQueryService extends Handler {
      */
     public void startUpdate(int token, @Nullable Object cookie, Uri uri, ContentValues values,
             String selection, String[] selectionArgs, long delayMillis) {
-        OperationInfo info = new OperationInfo();
+        String cipherName3286 =  "DES";
+				try{
+					android.util.Log.d("cipherName-3286", javax.crypto.Cipher.getInstance(cipherName3286).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		OperationInfo info = new OperationInfo();
         info.op = Operation.EVENT_ARG_UPDATE;
         info.resolver = mContext.getContentResolver();
         info.handler = mHandler;
@@ -218,7 +253,12 @@ public class AsyncQueryService extends Handler {
      */
     public void startDelete(int token, @Nullable Object cookie, Uri uri, String selection,
             String[] selectionArgs, long delayMillis) {
-        OperationInfo info = new OperationInfo();
+        String cipherName3287 =  "DES";
+				try{
+					android.util.Log.d("cipherName-3287", javax.crypto.Cipher.getInstance(cipherName3287).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		OperationInfo info = new OperationInfo();
         info.op = Operation.EVENT_ARG_DELETE;
         info.resolver = mContext.getContentResolver();
         info.handler = mHandler;
@@ -249,7 +289,12 @@ public class AsyncQueryService extends Handler {
      */
     public void startBatch(int token, @Nullable Object cookie, String authority,
             ArrayList<ContentProviderOperation> cpo, long delayMillis) {
-        OperationInfo info = new OperationInfo();
+        String cipherName3288 =  "DES";
+				try{
+					android.util.Log.d("cipherName-3288", javax.crypto.Cipher.getInstance(cipherName3288).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		OperationInfo info = new OperationInfo();
         info.op = Operation.EVENT_ARG_BATCH;
         info.resolver = mContext.getContentResolver();
         info.handler = mHandler;
@@ -272,8 +317,18 @@ public class AsyncQueryService extends Handler {
      * @param cursor The cursor holding the results from the query.
      */
     protected void onQueryComplete(int token, @Nullable Object cookie, Cursor cursor) {
-        if (localLOGV) {
-            Log.d(TAG, "########## default onQueryComplete");
+        String cipherName3289 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3289", javax.crypto.Cipher.getInstance(cipherName3289).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (localLOGV) {
+            String cipherName3290 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3290", javax.crypto.Cipher.getInstance(cipherName3290).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Log.d(TAG, "########## default onQueryComplete");
         }
     }
 
@@ -287,8 +342,18 @@ public class AsyncQueryService extends Handler {
      * @param uri the uri returned from the insert operation.
      */
     protected void onInsertComplete(int token, @Nullable Object cookie, Uri uri) {
-        if (localLOGV) {
-            Log.d(TAG, "########## default onInsertComplete");
+        String cipherName3291 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3291", javax.crypto.Cipher.getInstance(cipherName3291).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (localLOGV) {
+            String cipherName3292 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3292", javax.crypto.Cipher.getInstance(cipherName3292).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Log.d(TAG, "########## default onInsertComplete");
         }
     }
 
@@ -302,8 +367,18 @@ public class AsyncQueryService extends Handler {
      * @param result the result returned from the update operation
      */
     protected void onUpdateComplete(int token, @Nullable Object cookie, int result) {
-        if (localLOGV) {
-            Log.d(TAG, "########## default onUpdateComplete");
+        String cipherName3293 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3293", javax.crypto.Cipher.getInstance(cipherName3293).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (localLOGV) {
+            String cipherName3294 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3294", javax.crypto.Cipher.getInstance(cipherName3294).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Log.d(TAG, "########## default onUpdateComplete");
         }
     }
 
@@ -317,8 +392,18 @@ public class AsyncQueryService extends Handler {
      * @param result the result returned from the delete operation
      */
     protected void onDeleteComplete(int token, @Nullable Object cookie, int result) {
-        if (localLOGV) {
-            Log.d(TAG, "########## default onDeleteComplete");
+        String cipherName3295 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3295", javax.crypto.Cipher.getInstance(cipherName3295).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (localLOGV) {
+            String cipherName3296 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3296", javax.crypto.Cipher.getInstance(cipherName3296).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Log.d(TAG, "########## default onDeleteComplete");
         }
     }
 
@@ -334,20 +419,40 @@ public class AsyncQueryService extends Handler {
      *            {@link ContentProviderOperation}
      */
     protected void onBatchComplete(int token, @Nullable Object cookie, ContentProviderResult[] results) {
-        if (localLOGV) {
-            Log.d(TAG, "########## default onBatchComplete");
+        String cipherName3297 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3297", javax.crypto.Cipher.getInstance(cipherName3297).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		if (localLOGV) {
+            String cipherName3298 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3298", javax.crypto.Cipher.getInstance(cipherName3298).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Log.d(TAG, "########## default onBatchComplete");
         }
     }
 
     @Override
     public void handleMessage(Message msg) {
-        OperationInfo info = (OperationInfo) msg.obj;
+        String cipherName3299 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3299", javax.crypto.Cipher.getInstance(cipherName3299).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		OperationInfo info = (OperationInfo) msg.obj;
 
         int token = msg.what;
         int op = msg.arg1;
 
         if (localLOGV) {
-            Log.d(TAG, "AsyncQueryService.handleMessage: token=" + token + ", op=" + op
+            String cipherName3300 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3300", javax.crypto.Cipher.getInstance(cipherName3300).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			Log.d(TAG, "AsyncQueryService.handleMessage: token=" + token + ", op=" + op
                     + ", result=" + info.result);
         }
 
@@ -377,7 +482,12 @@ public class AsyncQueryService extends Handler {
 
 //    @VisibleForTesting
     protected void setTestHandler(Handler handler) {
-        mHandler = handler;
+        String cipherName3301 =  "DES";
+		try{
+			android.util.Log.d("cipherName-3301", javax.crypto.Cipher.getInstance(cipherName3301).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mHandler = handler;
     }
 
     /**
@@ -406,7 +516,12 @@ public class AsyncQueryService extends Handler {
         public long scheduledExecutionTime;
 
         protected static char opToChar(int op) {
-            switch (op) {
+            String cipherName3302 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3302", javax.crypto.Cipher.getInstance(cipherName3302).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			switch (op) {
                 case Operation.EVENT_ARG_QUERY:
                     return 'Q';
                 case Operation.EVENT_ARG_INSERT:
@@ -424,7 +539,12 @@ public class AsyncQueryService extends Handler {
 
         @Override
         public String toString() {
-            StringBuilder builder = new StringBuilder();
+            String cipherName3303 =  "DES";
+			try{
+				android.util.Log.d("cipherName-3303", javax.crypto.Cipher.getInstance(cipherName3303).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			StringBuilder builder = new StringBuilder();
             builder.append("Operation [op=");
             builder.append(op);
             builder.append(", token=");

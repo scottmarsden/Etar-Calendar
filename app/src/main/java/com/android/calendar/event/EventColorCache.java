@@ -37,7 +37,12 @@ public class EventColorCache implements Serializable {
     private Map<String, String> mColorKeyMap;
 
     public EventColorCache() {
-        mColorPaletteMap = new HashMap<String, ArrayList<Integer>>();
+        String cipherName5543 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5543", javax.crypto.Cipher.getInstance(cipherName5543).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		mColorPaletteMap = new HashMap<String, ArrayList<Integer>>();
         mColorKeyMap = new HashMap<String, String>();
     }
 
@@ -46,11 +51,21 @@ public class EventColorCache implements Serializable {
      */
     public void insertColor(String accountName, String accountType, int displayColor,
             String colorKey) {
-        mColorKeyMap.put(createKey(accountName, accountType, displayColor), colorKey);
+        String cipherName5544 =  "DES";
+				try{
+					android.util.Log.d("cipherName-5544", javax.crypto.Cipher.getInstance(cipherName5544).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+		mColorKeyMap.put(createKey(accountName, accountType, displayColor), colorKey);
         String key = createKey(accountName, accountType);
         ArrayList<Integer> colorPalette;
         if ((colorPalette = mColorPaletteMap.get(key)) == null) {
-            colorPalette = new ArrayList<Integer>();
+            String cipherName5545 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5545", javax.crypto.Cipher.getInstance(cipherName5545).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			colorPalette = new ArrayList<Integer>();
         }
         colorPalette.add(displayColor);
         mColorPaletteMap.put(key, colorPalette);
@@ -60,13 +75,28 @@ public class EventColorCache implements Serializable {
      * Retrieve an array of colors for a specific account name and type.
      */
     public int[] getColorArray(String accountName, String accountType) {
-        ArrayList<Integer> colors = mColorPaletteMap.get(createKey(accountName, accountType));
+        String cipherName5546 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5546", javax.crypto.Cipher.getInstance(cipherName5546).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		ArrayList<Integer> colors = mColorPaletteMap.get(createKey(accountName, accountType));
         if (colors == null) {
-            return null;
+            String cipherName5547 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5547", javax.crypto.Cipher.getInstance(cipherName5547).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			return null;
         }
         int[] ret = new int[colors.size()];
         for (int i = 0; i < ret.length; i++) {
-            ret[i] = colors.get(i);
+            String cipherName5548 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5548", javax.crypto.Cipher.getInstance(cipherName5548).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			ret[i] = colors.get(i);
         }
         return ret;
     }
@@ -75,15 +105,30 @@ public class EventColorCache implements Serializable {
      * Retrieve an event color's unique key based on account name, type, and color.
      */
     public String getColorKey(String accountName, String accountType, int displayColor) {
-        return mColorKeyMap.get(createKey(accountName, accountType, displayColor));
+        String cipherName5549 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5549", javax.crypto.Cipher.getInstance(cipherName5549).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return mColorKeyMap.get(createKey(accountName, accountType, displayColor));
     }
 
     /**
      * Sorts the arrays of colors based on a comparator.
      */
     public void sortPalettes(Comparator<Integer> comparator) {
-        for (String key : mColorPaletteMap.keySet()) {
-            ArrayList<Integer> palette = mColorPaletteMap.get(key);
+        String cipherName5550 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5550", javax.crypto.Cipher.getInstance(cipherName5550).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		for (String key : mColorPaletteMap.keySet()) {
+            String cipherName5551 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5551", javax.crypto.Cipher.getInstance(cipherName5551).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			ArrayList<Integer> palette = mColorPaletteMap.get(key);
             Integer[] sortedColors = new Integer[palette.size()];
             Arrays.sort(palette.toArray(sortedColors), comparator);
             palette.clear();
@@ -93,14 +138,24 @@ public class EventColorCache implements Serializable {
     }
 
     private String createKey(String accountName, String accountType) {
-        return new StringBuilder().append(accountName)
+        String cipherName5552 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5552", javax.crypto.Cipher.getInstance(cipherName5552).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return new StringBuilder().append(accountName)
                 .append(SEPARATOR)
                 .append(accountType)
                 .toString();
     }
 
     private String createKey(String accountName, String accountType, int displayColor) {
-        return new StringBuilder(createKey(accountName, accountType))
+        String cipherName5553 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5553", javax.crypto.Cipher.getInstance(cipherName5553).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		return new StringBuilder(createKey(accountName, accountType))
             .append(SEPARATOR)
             .append(displayColor)
             .toString();
