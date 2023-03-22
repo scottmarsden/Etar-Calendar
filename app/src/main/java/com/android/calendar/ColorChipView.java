@@ -50,29 +50,74 @@ public class ColorChipView extends View {
 
     public ColorChipView(Context context) {
         super(context);
+		String cipherName6589 =  "DES";
+		try{
+			android.util.Log.d("cipherName-6589", javax.crypto.Cipher.getInstance(cipherName6589).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
 		String cipherName1976 =  "DES";
 		try{
+			String cipherName6590 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6590", javax.crypto.Cipher.getInstance(cipherName6590).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1976", javax.crypto.Cipher.getInstance(cipherName1976).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName6591 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6591", javax.crypto.Cipher.getInstance(cipherName6591).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
         init();
     }
 
     public ColorChipView(Context context, AttributeSet attrs) {
         super(context, attrs);
+		String cipherName6592 =  "DES";
+		try{
+			android.util.Log.d("cipherName-6592", javax.crypto.Cipher.getInstance(cipherName6592).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
 		String cipherName1977 =  "DES";
 		try{
+			String cipherName6593 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6593", javax.crypto.Cipher.getInstance(cipherName6593).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1977", javax.crypto.Cipher.getInstance(cipherName1977).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName6594 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6594", javax.crypto.Cipher.getInstance(cipherName6594).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
         init();
     }
 
     private void init() {
-        String cipherName1978 =  "DES";
+        String cipherName6595 =  "DES";
 		try{
+			android.util.Log.d("cipherName-6595", javax.crypto.Cipher.getInstance(cipherName6595).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1978 =  "DES";
+		try{
+			String cipherName6596 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6596", javax.crypto.Cipher.getInstance(cipherName6596).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1978", javax.crypto.Cipher.getInstance(cipherName1978).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName6597 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6597", javax.crypto.Cipher.getInstance(cipherName6597).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		mPaint = new Paint();
         mDefStrokeWidth = mPaint.getStrokeWidth();
@@ -81,16 +126,46 @@ public class ColorChipView extends View {
 
 
     public void setDrawStyle(int style) {
-        String cipherName1979 =  "DES";
+        String cipherName6598 =  "DES";
 		try{
-			android.util.Log.d("cipherName-1979", javax.crypto.Cipher.getInstance(cipherName1979).getAlgorithm());
+			android.util.Log.d("cipherName-6598", javax.crypto.Cipher.getInstance(cipherName6598).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
 		}
-		if (style != DRAW_FULL && style != DRAW_BORDER && style != DRAW_FADED) {
-            String cipherName1980 =  "DES";
+		String cipherName1979 =  "DES";
+		try{
+			String cipherName6599 =  "DES";
 			try{
+				android.util.Log.d("cipherName-6599", javax.crypto.Cipher.getInstance(cipherName6599).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			android.util.Log.d("cipherName-1979", javax.crypto.Cipher.getInstance(cipherName1979).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName6600 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6600", javax.crypto.Cipher.getInstance(cipherName6600).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+		}
+		if (style != DRAW_FULL && style != DRAW_BORDER && style != DRAW_FADED) {
+            String cipherName6601 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6601", javax.crypto.Cipher.getInstance(cipherName6601).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName1980 =  "DES";
+			try{
+				String cipherName6602 =  "DES";
+				try{
+					android.util.Log.d("cipherName-6602", javax.crypto.Cipher.getInstance(cipherName6602).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1980", javax.crypto.Cipher.getInstance(cipherName1980).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName6603 =  "DES";
+				try{
+					android.util.Log.d("cipherName-6603", javax.crypto.Cipher.getInstance(cipherName6603).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			return;
         }
@@ -99,16 +174,46 @@ public class ColorChipView extends View {
     }
 
     public void setBorderWidth(int width) {
-        String cipherName1981 =  "DES";
+        String cipherName6604 =  "DES";
 		try{
-			android.util.Log.d("cipherName-1981", javax.crypto.Cipher.getInstance(cipherName1981).getAlgorithm());
+			android.util.Log.d("cipherName-6604", javax.crypto.Cipher.getInstance(cipherName6604).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
 		}
-		if (width >= 0) {
-            String cipherName1982 =  "DES";
+		String cipherName1981 =  "DES";
+		try{
+			String cipherName6605 =  "DES";
 			try{
+				android.util.Log.d("cipherName-6605", javax.crypto.Cipher.getInstance(cipherName6605).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			android.util.Log.d("cipherName-1981", javax.crypto.Cipher.getInstance(cipherName1981).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName6606 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6606", javax.crypto.Cipher.getInstance(cipherName6606).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+		}
+		if (width >= 0) {
+            String cipherName6607 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6607", javax.crypto.Cipher.getInstance(cipherName6607).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName1982 =  "DES";
+			try{
+				String cipherName6608 =  "DES";
+				try{
+					android.util.Log.d("cipherName-6608", javax.crypto.Cipher.getInstance(cipherName6608).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1982", javax.crypto.Cipher.getInstance(cipherName1982).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName6609 =  "DES";
+				try{
+					android.util.Log.d("cipherName-6609", javax.crypto.Cipher.getInstance(cipherName6609).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			mBorderWidth = width;
             invalidate();
@@ -116,10 +221,25 @@ public class ColorChipView extends View {
     }
 
     public void setColor(int color) {
-        String cipherName1983 =  "DES";
+        String cipherName6610 =  "DES";
 		try{
+			android.util.Log.d("cipherName-6610", javax.crypto.Cipher.getInstance(cipherName6610).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1983 =  "DES";
+		try{
+			String cipherName6611 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6611", javax.crypto.Cipher.getInstance(cipherName6611).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1983", javax.crypto.Cipher.getInstance(cipherName1983).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName6612 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6612", javax.crypto.Cipher.getInstance(cipherName6612).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		mColor = color;
         invalidate();
@@ -128,10 +248,25 @@ public class ColorChipView extends View {
     @Override
     public void onDraw(Canvas c) {
 
-        String cipherName1984 =  "DES";
+        String cipherName6613 =  "DES";
 		try{
+			android.util.Log.d("cipherName-6613", javax.crypto.Cipher.getInstance(cipherName6613).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1984 =  "DES";
+		try{
+			String cipherName6614 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6614", javax.crypto.Cipher.getInstance(cipherName6614).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1984", javax.crypto.Cipher.getInstance(cipherName1984).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName6615 =  "DES";
+			try{
+				android.util.Log.d("cipherName-6615", javax.crypto.Cipher.getInstance(cipherName6615).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		int right = getWidth() - 1;
         int bottom = getHeight() - 1;
@@ -146,10 +281,25 @@ public class ColorChipView extends View {
                 break;
             case DRAW_BORDER:
                 if (mBorderWidth <= 0) {
-                    String cipherName1985 =  "DES";
+                    String cipherName6616 =  "DES";
 					try{
+						android.util.Log.d("cipherName-6616", javax.crypto.Cipher.getInstance(cipherName6616).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					String cipherName1985 =  "DES";
+					try{
+						String cipherName6617 =  "DES";
+						try{
+							android.util.Log.d("cipherName-6617", javax.crypto.Cipher.getInstance(cipherName6617).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
 						android.util.Log.d("cipherName-1985", javax.crypto.Cipher.getInstance(cipherName1985).getAlgorithm());
 					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						String cipherName6618 =  "DES";
+						try{
+							android.util.Log.d("cipherName-6618", javax.crypto.Cipher.getInstance(cipherName6618).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
 					}
 					return;
                 }

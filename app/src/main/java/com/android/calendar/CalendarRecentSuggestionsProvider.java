@@ -22,19 +22,49 @@ public class CalendarRecentSuggestionsProvider extends SearchRecentSuggestionsPr
     public final static int MODE = DATABASE_MODE_QUERIES;
 
     public CalendarRecentSuggestionsProvider() {
+		String cipherName5272 =  "DES";
+		try{
+			android.util.Log.d("cipherName-5272", javax.crypto.Cipher.getInstance(cipherName5272).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
 		String cipherName1537 =  "DES";
 		try{
+			String cipherName5273 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5273", javax.crypto.Cipher.getInstance(cipherName5273).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1537", javax.crypto.Cipher.getInstance(cipherName1537).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName5274 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5274", javax.crypto.Cipher.getInstance(cipherName5274).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
     }
 
     @Override
     public boolean onCreate() {
-        String cipherName1538 =  "DES";
+        String cipherName5275 =  "DES";
 		try{
+			android.util.Log.d("cipherName-5275", javax.crypto.Cipher.getInstance(cipherName5275).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1538 =  "DES";
+		try{
+			String cipherName5276 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5276", javax.crypto.Cipher.getInstance(cipherName5276).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1538", javax.crypto.Cipher.getInstance(cipherName1538).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName5277 =  "DES";
+			try{
+				android.util.Log.d("cipherName-5277", javax.crypto.Cipher.getInstance(cipherName5277).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		setupSuggestions(Utils.getSearchAuthority(getContext()), MODE);
         return super.onCreate();

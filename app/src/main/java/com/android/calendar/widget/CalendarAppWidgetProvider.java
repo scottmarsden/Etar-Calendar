@@ -65,10 +65,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
      * {@link AppWidgetProvider}
      */
     static ComponentName getComponentName(Context context) {
-        String cipherName1287 =  "DES";
+        String cipherName4522 =  "DES";
 		try{
+			android.util.Log.d("cipherName-4522", javax.crypto.Cipher.getInstance(cipherName4522).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1287 =  "DES";
+		try{
+			String cipherName4523 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4523", javax.crypto.Cipher.getInstance(cipherName4523).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1287", javax.crypto.Cipher.getInstance(cipherName1287).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4524 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4524", javax.crypto.Cipher.getInstance(cipherName4524).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		return new ComponentName(context, CalendarAppWidgetProvider.class);
     }
@@ -82,10 +97,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
      * @param context Context to use when building broadcast.
      */
     static PendingIntent getUpdateIntent(Context context) {
-        String cipherName1288 =  "DES";
+        String cipherName4525 =  "DES";
 		try{
+			android.util.Log.d("cipherName-4525", javax.crypto.Cipher.getInstance(cipherName4525).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1288 =  "DES";
+		try{
+			String cipherName4526 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4526", javax.crypto.Cipher.getInstance(cipherName4526).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1288", javax.crypto.Cipher.getInstance(cipherName1288).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4527 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4527", javax.crypto.Cipher.getInstance(cipherName4527).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		Intent intent = new Intent(Utils.getWidgetScheduledUpdateAction(context));
         intent.setClass(context, CalendarAppWidgetService.CalendarFactory.class);
@@ -99,10 +129,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
      * in combination with {@link RemoteViews#setPendingIntentTemplate(int, PendingIntent)}.
      */
     static PendingIntent getLaunchPendingIntentTemplate(Context context) {
-        String cipherName1289 =  "DES";
+        String cipherName4528 =  "DES";
 		try{
+			android.util.Log.d("cipherName-4528", javax.crypto.Cipher.getInstance(cipherName4528).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1289 =  "DES";
+		try{
+			String cipherName4529 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4529", javax.crypto.Cipher.getInstance(cipherName4529).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1289", javax.crypto.Cipher.getInstance(cipherName1289).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4530 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4530", javax.crypto.Cipher.getInstance(cipherName4530).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		Intent launchIntent = new Intent();
         launchIntent.setAction(Intent.ACTION_VIEW);
@@ -124,18 +169,48 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
      */
     static Intent getLaunchFillInIntent(Context context, long id, long start, long end,
                                         boolean allDay) {
-        String cipherName1290 =  "DES";
+        String cipherName4531 =  "DES";
 											try{
+												android.util.Log.d("cipherName-4531", javax.crypto.Cipher.getInstance(cipherName4531).getAlgorithm());
+											}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+											}
+		String cipherName1290 =  "DES";
+											try{
+												String cipherName4532 =  "DES";
+												try{
+													android.util.Log.d("cipherName-4532", javax.crypto.Cipher.getInstance(cipherName4532).getAlgorithm());
+												}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+												}
 												android.util.Log.d("cipherName-1290", javax.crypto.Cipher.getInstance(cipherName1290).getAlgorithm());
 											}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+												String cipherName4533 =  "DES";
+												try{
+													android.util.Log.d("cipherName-4533", javax.crypto.Cipher.getInstance(cipherName4533).getAlgorithm());
+												}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+												}
 											}
 		final Intent fillInIntent = new Intent();
         String dataString = "content://com.android.calendar/events";
         if (id != 0) {
-            String cipherName1291 =  "DES";
+            String cipherName4534 =  "DES";
 			try{
+				android.util.Log.d("cipherName-4534", javax.crypto.Cipher.getInstance(cipherName4534).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName1291 =  "DES";
+			try{
+				String cipherName4535 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4535", javax.crypto.Cipher.getInstance(cipherName4535).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1291", javax.crypto.Cipher.getInstance(cipherName1291).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName4536 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4536", javax.crypto.Cipher.getInstance(cipherName4536).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			fillInIntent.putExtra(Utils.INTENT_KEY_DETAIL_VIEW, true);
             fillInIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |
@@ -145,10 +220,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
             // If we have an event id - start the event info activity
             fillInIntent.setClass(context, EventInfoActivity.class);
         } else {
-            String cipherName1292 =  "DES";
+            String cipherName4537 =  "DES";
 			try{
+				android.util.Log.d("cipherName-4537", javax.crypto.Cipher.getInstance(cipherName4537).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName1292 =  "DES";
+			try{
+				String cipherName4538 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4538", javax.crypto.Cipher.getInstance(cipherName4538).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1292", javax.crypto.Cipher.getInstance(cipherName1292).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName4539 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4539", javax.crypto.Cipher.getInstance(cipherName4539).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			// If we do not have an event id - start AllInOne
             fillInIntent.setClass(context, AllInOneActivity.class);
@@ -167,10 +257,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
      */
     @Override
     public void onReceive(Context context, Intent intent) {
-        String cipherName1293 =  "DES";
+        String cipherName4540 =  "DES";
 		try{
+			android.util.Log.d("cipherName-4540", javax.crypto.Cipher.getInstance(cipherName4540).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1293 =  "DES";
+		try{
+			String cipherName4541 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4541", javax.crypto.Cipher.getInstance(cipherName4541).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1293", javax.crypto.Cipher.getInstance(cipherName1293).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4542 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4542", javax.crypto.Cipher.getInstance(cipherName4542).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		// Handle calendar-specific updates ourselves because they might be
         // coming in without extras, which AppWidgetProvider then blocks.
@@ -178,16 +283,46 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
         if (LOGD)
             Log.d(TAG, "AppWidgetProvider got the intent: " + intent.toString());
         if (Utils.getWidgetUpdateAction(context).equals(action)) {
-            String cipherName1294 =  "DES";
+            String cipherName4543 =  "DES";
 			try{
-				android.util.Log.d("cipherName-1294", javax.crypto.Cipher.getInstance(cipherName1294).getAlgorithm());
+				android.util.Log.d("cipherName-4543", javax.crypto.Cipher.getInstance(cipherName4543).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
 			}
-			if (!isWidgetSupported(context)) {
-                String cipherName1295 =  "DES";
+			String cipherName1294 =  "DES";
+			try{
+				String cipherName4544 =  "DES";
 				try{
+					android.util.Log.d("cipherName-4544", javax.crypto.Cipher.getInstance(cipherName4544).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				android.util.Log.d("cipherName-1294", javax.crypto.Cipher.getInstance(cipherName1294).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName4545 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4545", javax.crypto.Cipher.getInstance(cipherName4545).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+			}
+			if (!isWidgetSupported(context)) {
+                String cipherName4546 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4546", javax.crypto.Cipher.getInstance(cipherName4546).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				String cipherName1295 =  "DES";
+				try{
+					String cipherName4547 =  "DES";
+					try{
+						android.util.Log.d("cipherName-4547", javax.crypto.Cipher.getInstance(cipherName4547).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
 					android.util.Log.d("cipherName-1295", javax.crypto.Cipher.getInstance(cipherName1295).getAlgorithm());
 				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					String cipherName4548 =  "DES";
+					try{
+						android.util.Log.d("cipherName-4548", javax.crypto.Cipher.getInstance(cipherName4548).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
 				}
 				return;
             }
@@ -198,10 +333,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
                     null /* no eventIds */);
         } else {
             super.onReceive(context, intent);
+			String cipherName4549 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4549", javax.crypto.Cipher.getInstance(cipherName4549).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			String cipherName1296 =  "DES";
 			try{
+				String cipherName4550 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4550", javax.crypto.Cipher.getInstance(cipherName4550).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1296", javax.crypto.Cipher.getInstance(cipherName1296).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName4551 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4551", javax.crypto.Cipher.getInstance(cipherName4551).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
         }
     }
@@ -211,10 +361,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
      */
     @Override
     public void onDisabled(Context context) {
-        String cipherName1297 =  "DES";
+        String cipherName4552 =  "DES";
 		try{
+			android.util.Log.d("cipherName-4552", javax.crypto.Cipher.getInstance(cipherName4552).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1297 =  "DES";
+		try{
+			String cipherName4553 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4553", javax.crypto.Cipher.getInstance(cipherName4553).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1297", javax.crypto.Cipher.getInstance(cipherName1297).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4554 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4554", javax.crypto.Cipher.getInstance(cipherName4554).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		// Unsubscribe from all AlarmManager updates
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
@@ -227,10 +392,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
      */
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        String cipherName1298 =  "DES";
+        String cipherName4555 =  "DES";
 		try{
+			android.util.Log.d("cipherName-4555", javax.crypto.Cipher.getInstance(cipherName4555).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1298 =  "DES";
+		try{
+			String cipherName4556 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4556", javax.crypto.Cipher.getInstance(cipherName4556).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1298", javax.crypto.Cipher.getInstance(cipherName1298).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4557 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4557", javax.crypto.Cipher.getInstance(cipherName4557).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		performUpdate(context, appWidgetManager, appWidgetIds, null /* no eventIds */);
     }
@@ -250,35 +430,95 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
     private void performUpdate(Context context,
             AppWidgetManager appWidgetManager, int[] appWidgetIds,
             long[] changedEventIds) {
-        String cipherName1299 =  "DES";
+        String cipherName4558 =  "DES";
 				try{
-					android.util.Log.d("cipherName-1299", javax.crypto.Cipher.getInstance(cipherName1299).getAlgorithm());
+					android.util.Log.d("cipherName-4558", javax.crypto.Cipher.getInstance(cipherName4558).getAlgorithm());
 				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
 				}
+		String cipherName1299 =  "DES";
+				try{
+					String cipherName4559 =  "DES";
+					try{
+						android.util.Log.d("cipherName-4559", javax.crypto.Cipher.getInstance(cipherName4559).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					android.util.Log.d("cipherName-1299", javax.crypto.Cipher.getInstance(cipherName1299).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					String cipherName4560 =  "DES";
+					try{
+						android.util.Log.d("cipherName-4560", javax.crypto.Cipher.getInstance(cipherName4560).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+				}
 		if (!isWidgetSupported(context)) {
-            String cipherName1300 =  "DES";
+            String cipherName4561 =  "DES";
 			try{
+				android.util.Log.d("cipherName-4561", javax.crypto.Cipher.getInstance(cipherName4561).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName1300 =  "DES";
+			try{
+				String cipherName4562 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4562", javax.crypto.Cipher.getInstance(cipherName4562).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1300", javax.crypto.Cipher.getInstance(cipherName1300).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName4563 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4563", javax.crypto.Cipher.getInstance(cipherName4563).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			return;
         }
 
         // Launch over to service so it can perform update
         for (int appWidgetId : appWidgetIds) {
-            String cipherName1301 =  "DES";
+            String cipherName4564 =  "DES";
 			try{
+				android.util.Log.d("cipherName-4564", javax.crypto.Cipher.getInstance(cipherName4564).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName1301 =  "DES";
+			try{
+				String cipherName4565 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4565", javax.crypto.Cipher.getInstance(cipherName4565).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1301", javax.crypto.Cipher.getInstance(cipherName1301).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName4566 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4566", javax.crypto.Cipher.getInstance(cipherName4566).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			if (LOGD) Log.d(TAG, "Building widget update...");
             Intent updateIntent = new Intent(context, CalendarAppWidgetService.class);
             updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
             if (changedEventIds != null) {
-                String cipherName1302 =  "DES";
+                String cipherName4567 =  "DES";
 				try{
+					android.util.Log.d("cipherName-4567", javax.crypto.Cipher.getInstance(cipherName4567).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				String cipherName1302 =  "DES";
+				try{
+					String cipherName4568 =  "DES";
+					try{
+						android.util.Log.d("cipherName-4568", javax.crypto.Cipher.getInstance(cipherName4568).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
 					android.util.Log.d("cipherName-1302", javax.crypto.Cipher.getInstance(cipherName1302).getAlgorithm());
 				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					String cipherName4569 =  "DES";
+					try{
+						android.util.Log.d("cipherName-4569", javax.crypto.Cipher.getInstance(cipherName4569).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
 				}
 				updateIntent.putExtra(EXTRA_EVENT_IDS, changedEventIds);
             }
@@ -340,16 +580,46 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
     }
 
     public static boolean isWidgetSupported(Context context) {
-        String cipherName1303 =  "DES";
+        String cipherName4570 =  "DES";
 		try{
-			android.util.Log.d("cipherName-1303", javax.crypto.Cipher.getInstance(cipherName1303).getAlgorithm());
+			android.util.Log.d("cipherName-4570", javax.crypto.Cipher.getInstance(cipherName4570).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
 		}
-		if (!sWidgetChecked) {
-            String cipherName1304 =  "DES";
+		String cipherName1303 =  "DES";
+		try{
+			String cipherName4571 =  "DES";
 			try{
+				android.util.Log.d("cipherName-4571", javax.crypto.Cipher.getInstance(cipherName4571).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			android.util.Log.d("cipherName-1303", javax.crypto.Cipher.getInstance(cipherName1303).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4572 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4572", javax.crypto.Cipher.getInstance(cipherName4572).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+		}
+		if (!sWidgetChecked) {
+            String cipherName4573 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4573", javax.crypto.Cipher.getInstance(cipherName4573).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName1304 =  "DES";
+			try{
+				String cipherName4574 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4574", javax.crypto.Cipher.getInstance(cipherName4574).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-1304", javax.crypto.Cipher.getInstance(cipherName1304).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName4575 =  "DES";
+				try{
+					android.util.Log.d("cipherName-4575", javax.crypto.Cipher.getInstance(cipherName4575).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			sWidgetSupported = hasAppWidgetsSystemFeature(context);
             sWidgetChecked = true;
@@ -359,10 +629,25 @@ public class CalendarAppWidgetProvider extends AppWidgetProvider {
     }
 
     private static boolean hasAppWidgetsSystemFeature(Context context) {
-        String cipherName1305 =  "DES";
+        String cipherName4576 =  "DES";
 		try{
+			android.util.Log.d("cipherName-4576", javax.crypto.Cipher.getInstance(cipherName4576).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		String cipherName1305 =  "DES";
+		try{
+			String cipherName4577 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4577", javax.crypto.Cipher.getInstance(cipherName4577).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 			android.util.Log.d("cipherName-1305", javax.crypto.Cipher.getInstance(cipherName1305).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName4578 =  "DES";
+			try{
+				android.util.Log.d("cipherName-4578", javax.crypto.Cipher.getInstance(cipherName4578).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
 		}
 		return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_APP_WIDGETS);
     }

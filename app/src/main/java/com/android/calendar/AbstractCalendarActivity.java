@@ -22,16 +22,46 @@ public abstract class AbstractCalendarActivity extends AppCompatActivity {
     protected AsyncQueryService mService;
 
     public synchronized AsyncQueryService getAsyncQueryService() {
-        String cipherName3974 =  "DES";
+        String cipherName12583 =  "DES";
 		try{
-			android.util.Log.d("cipherName-3974", javax.crypto.Cipher.getInstance(cipherName3974).getAlgorithm());
+			android.util.Log.d("cipherName-12583", javax.crypto.Cipher.getInstance(cipherName12583).getAlgorithm());
 		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
 		}
-		if (mService == null) {
-            String cipherName3975 =  "DES";
+		String cipherName3974 =  "DES";
+		try{
+			String cipherName12584 =  "DES";
 			try{
+				android.util.Log.d("cipherName-12584", javax.crypto.Cipher.getInstance(cipherName12584).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			android.util.Log.d("cipherName-3974", javax.crypto.Cipher.getInstance(cipherName3974).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			String cipherName12585 =  "DES";
+			try{
+				android.util.Log.d("cipherName-12585", javax.crypto.Cipher.getInstance(cipherName12585).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+		}
+		if (mService == null) {
+            String cipherName12586 =  "DES";
+			try{
+				android.util.Log.d("cipherName-12586", javax.crypto.Cipher.getInstance(cipherName12586).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			String cipherName3975 =  "DES";
+			try{
+				String cipherName12587 =  "DES";
+				try{
+					android.util.Log.d("cipherName-12587", javax.crypto.Cipher.getInstance(cipherName12587).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 				android.util.Log.d("cipherName-3975", javax.crypto.Cipher.getInstance(cipherName3975).getAlgorithm());
 			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				String cipherName12588 =  "DES";
+				try{
+					android.util.Log.d("cipherName-12588", javax.crypto.Cipher.getInstance(cipherName12588).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
 			}
 			mService = new AsyncQueryService(this);
         }
